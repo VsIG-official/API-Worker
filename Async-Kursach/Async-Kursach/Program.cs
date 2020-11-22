@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
+			ApiHelper.InitializeClient();
+
 			Console.WriteLine("Hi, My name is Async Kursach and " +
 				"I will help You to have some fun!");
 			Console.WriteLine("Which one do You want to do?");
@@ -18,7 +16,7 @@ namespace Async_Kursach
 
 			string userChoice = Console.ReadLine();
 
-			if (userChoice=="1")
+			if (userChoice == "1")
 			{
 				//Console.WriteLine("Which one do You want to do?");
 				Console.WriteLine("Enter Your sentence:");
@@ -26,7 +24,7 @@ namespace Async_Kursach
 			}
 			else
 			{
-			Console.WriteLine("That's the wrong number");
+				Console.WriteLine("That's the wrong number");
 			}
 		}
 	}

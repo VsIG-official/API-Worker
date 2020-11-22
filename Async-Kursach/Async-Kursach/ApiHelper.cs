@@ -7,7 +7,7 @@ namespace Async_Kursach
 	/// <summary>
 	/// Class for Api Client
 	/// </summary>
-	class ApiHelper
+	public static class ApiHelper
 	{
 		// Create static, 'cause We need one client per application
 		public static HttpClient ApiClient { get; set; }
