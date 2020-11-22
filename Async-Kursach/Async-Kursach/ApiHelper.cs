@@ -8,6 +8,9 @@ using System.Net.Http.Headers;
 
 namespace Async_Kursach
 {
+	/// <summary>
+	/// Class for Api Client
+	/// </summary>
 	class ApiHelper
 	{
 		// Create static, 'cause We need one client per application
