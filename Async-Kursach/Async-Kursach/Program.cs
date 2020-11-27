@@ -7,13 +7,12 @@ namespace Async_Kursach
 {
 	class Program
 	{
-		
 		static void Main()
 		{
 			Console.WriteLine("Hi, My name is Async Kursach and " +
 				"I will help You to have some fun!");
 			Console.WriteLine("Which one do You want to do?");
-			Console.WriteLine("1 - to predict some data, depending on Your name");
+			Console.WriteLine("1 - to predict some age, gender and nation, depending on Your name");
 
 			string userChoice = Console.ReadLine();
 
@@ -38,7 +37,7 @@ namespace Async_Kursach
 
 				AgeByNameResponse ageResponse = JsonConvert.DeserializeObject<AgeByNameResponse>(response);
 
-				Console.WriteLine("Your name is {0} and Your predicted age is {1}",ageResponse.Name,ageResponse.Age);
+				Console.WriteLine($"Your name is {userName} and Your predicted age is {ageResponse.Age}");
 			}
 			else
 			{
