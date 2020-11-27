@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
-	public class ValueByName
+	public class AgeByName
 	{
 		const string defaultString = "Valentyn";
-		public async Task LoadValue(string text)
+		public static async Task<AgeByNameModel> LoadValue(string text)
 		{
 			string url;
 			if (text!= defaultString)
@@ -29,7 +29,14 @@ namespace Async_Kursach
 				if (response.IsSuccessStatusCode)
 				{
 					// there We will read the data
+					// convert json to ValueByNameModel with correct properties
+					AgeByNameModel age = await response.Content.ReadAsAsync<AgeByNameModel>();
 
+					return age;
+				}
+				else
+				{
+					throw new Exception(response.ReasonPhrase);
 				}
 			}
 			//there a response is closing and make sure, that Our calls are cleaned up

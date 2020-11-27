@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
-	class ValueByNameModel
+	public class AgeByNameModel
 	{
+		public string Name { get; set; }
+		public int Age{ get; set; }
 	}
 }
