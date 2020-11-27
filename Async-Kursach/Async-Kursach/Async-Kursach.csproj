@@ -49,9 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiHelper.cs" />
+    <Compile Include="AgeByNameResponse.cs" />
     <Compile Include="ConfigurationData.cs" />
-    <Compile Include="ValueByName.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
