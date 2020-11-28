@@ -2,7 +2,6 @@
 {
 	public class NationByNameModel
 	{
-		public string Gender { get; set; }
-		public float Probability { get; set; }
+		public string[] Country { get; set; }
 	}
 }

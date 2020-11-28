@@ -55,6 +55,8 @@
     <Compile Include="ConfigurationData.cs" />
     <Compile Include="GenderByName.cs" />
     <Compile Include="GenderByNameModel.cs" />
+    <Compile Include="NationByName.cs" />
+    <Compile Include="NationByNameModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

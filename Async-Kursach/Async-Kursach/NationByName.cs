@@ -12,11 +12,11 @@ namespace Async_Kursach
 			string url;
 			if (text != defaultString)
 			{
-				url = $"https://api.genderize.io/?name={ text } ";
+				url = $"https://api.nationalize.io/?name={ text } ";
 			}
 			else
 			{
-				url = $"https://api.genderize.io/?name={ defaultString }";
+				url = $"https://api.nationalize.io/?name={ defaultString }";
 			}
 
 			//open a call to a client
@@ -27,9 +27,9 @@ namespace Async_Kursach
 				{
 					// there We will read the data
 					// convert json to ValueByNameModel with correct properties
-					NationByNameModel genderAndProbability = await response.Content.ReadAsAsync<NationByNameModel>();
+					NationByNameModel nationsAndProbability = await response.Content.ReadAsAsync<NationByNameModel>();
 
-					return genderAndProbability;
+					return nationsAndProbability;
 				}
 				else
 				{
@@ -40,4 +40,3 @@ namespace Async_Kursach
 		}
 	}
 }
-
