@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Net.Http.Headers;
 
 namespace Async_Kursach
@@ -25,7 +24,7 @@ namespace Async_Kursach
 			};
 			ApiClient.DefaultRequestHeaders.Accept.Clear();
 			// give Us json, not webpage or etc.
-			ApiClient.DefaultRequestHeaders.Accept.Add(new 
+			ApiClient.DefaultRequestHeaders.Accept.Add(new
 				MediaTypeWithQualityHeaderValue("application/json"));
 		}
 	}

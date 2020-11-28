@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
 	class Program
 	{
-		static void Main()
+		static async Task Main()
 		{
 			ApiHelper.InitializeClient();
 
@@ -19,14 +20,27 @@ namespace Async_Kursach
 			{
 				//Console.WriteLine("Which one do You want to do?");
 				Console.WriteLine("Enter Your name:");
-				string userSentence = Console.ReadLine();
-				AgeByName ageApi = new AgeByName();
-				
+				string userName = Console.ReadLine();
+				await LoadNameInfoAsync(userName);
 			}
 			else
 			{
 				Console.WriteLine("That's the wrong number");
 			}
+		}
+		private static async Task LoadNameInfoAsync(string name)
+		{
+			int age = await LoadNameAge(name);
+
+			Console.WriteLine($"Your name is {name} and Your predicted age is {age}");
+			Console.ReadLine();
+		}
+
+		private static async Task<int> LoadNameAge(string name)
+		{
+			AgeByNameModel age = await AgeByName.LoadValue(name);
+
+			return age.Age;
 		}
 	}
 }

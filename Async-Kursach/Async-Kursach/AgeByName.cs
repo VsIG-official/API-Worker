@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Async_Kursach
@@ -13,7 +10,7 @@ namespace Async_Kursach
 		public static async Task<AgeByNameModel> LoadValue(string text)
 		{
 			string url;
-			if (text!= defaultString)
+			if (text != defaultString)
 			{
 				url = $"https://api.agify.io?name={ text } ";
 			}
