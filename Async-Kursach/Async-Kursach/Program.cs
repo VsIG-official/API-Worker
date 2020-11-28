@@ -31,8 +31,12 @@ namespace Async_Kursach
 		private static async Task LoadNameInfoAsync(string name)
 		{
 			int age = await LoadNameAge(name);
+			string[] genderData = await LoadNameGender(name);
 
-			Console.WriteLine($"Your name is {name} and Your predicted age is {age}");
+			Console.WriteLine($"Here some data for {name} name: \n" +
+				$"Your predicted age is {age} \n" +
+				$"Your predicted gender is {genderData[0]} with " +
+				$"probability of {genderData[1]} ");
 			Console.ReadLine();
 		}
 
@@ -41,6 +45,17 @@ namespace Async_Kursach
 			AgeByNameModel age = await AgeByName.LoadValue(name);
 
 			return age.Age;
+		}
+
+		private static async Task<string[]> LoadNameGender(string name)
+		{
+			string[] genderData = new string[2];
+			GenderByNameModel gender = await GenderByName.LoadValue(name);
+
+			genderData[0] = gender.Gender;
+			genderData[1] = gender.Probability.ToString();
+
+			return genderData;
 		}
 	}
 }
