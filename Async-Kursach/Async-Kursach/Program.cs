@@ -12,7 +12,8 @@ namespace Async_Kursach
 			Console.WriteLine("Hi, My name is Async Kursach and " +
 				"I will help You to have some fun!");
 			Console.WriteLine("Which one do You want to do?");
-			Console.WriteLine("1 - to predict some data, depending on Your name");
+			Console.WriteLine("1 - to predict some data, depending on Your name\n" +
+				"2 - find something to do by getting suggestions for random activities");
 
 			string userChoice = Console.ReadLine();
 
@@ -20,16 +21,21 @@ namespace Async_Kursach
 			{
 				Console.WriteLine("Enter Your name:");
 				string userName = Console.ReadLine();
-				await LoadNameInfoAsync(userName);
+
+				await LoadNameInfo(userName);
 			}
-			else
+			else if(userChoice == "2")
+			{
+
+			}
+			else 
 			{
 				Console.WriteLine("That's the wrong number");
 			}
 
 			Console.ReadLine();
 		}
-		private static async Task LoadNameInfoAsync(string name)
+		private static async Task LoadNameInfo(string name)
 		{
 			int age = await LoadNameAge(name);
 			string[] genderData = await LoadNameGender(name);
@@ -56,6 +62,19 @@ namespace Async_Kursach
 			genderData[1] = gender.Probability.ToString();
 
 			return genderData;
+		}
+
+		private static async Task<string[]> LoadActivities()
+		{
+			string[] activitiesData = new string[4];
+			ActivitiesModel activities = await Activities.LoadValue();
+
+			activitiesData[0] = activities.Activity;
+			activitiesData[1] = activities.Type;
+			activitiesData[2] = activities.Participants.ToString();
+			activitiesData[3] = activities.Price.ToString();
+
+			return activitiesData;
 		}
 	}
 }

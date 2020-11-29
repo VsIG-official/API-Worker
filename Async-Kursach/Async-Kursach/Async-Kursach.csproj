@@ -49,14 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities.cs" />
+    <Compile Include="ActivitiesModel.cs" />
     <Compile Include="AgeByName.cs" />
     <Compile Include="AgeByNameModel.cs" />
     <Compile Include="ApiHelper.cs" />
     <Compile Include="ConfigurationData.cs" />
     <Compile Include="GenderByName.cs" />
     <Compile Include="GenderByNameModel.cs" />
-    <Compile Include="NationByName.cs" />
-    <Compile Include="NationByNameModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
