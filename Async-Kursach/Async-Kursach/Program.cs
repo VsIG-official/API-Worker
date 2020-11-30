@@ -13,7 +13,8 @@ namespace Async_Kursach
 				"I will help You to have some fun!");
 			Console.WriteLine("Which one do You want to do?");
 			Console.WriteLine("1 - to predict some data, depending on Your name\n" +
-				"2 - find something to do by getting suggestions for random activities");
+				"2 - find something to do by getting suggestions for random activities\n" +
+				"3 - get a joke");
 
 			string userChoice = Console.ReadLine();
 
@@ -27,6 +28,10 @@ namespace Async_Kursach
 			else if(userChoice == "2")
 			{
 				await LoadActivities();
+			}
+			else if (userChoice == "3")
+			{
+				await LoadJokes();
 			}
 			else 
 			{
@@ -81,6 +86,24 @@ namespace Async_Kursach
 				$"Price - {activitiesData[3]}");
 
 			return activitiesData;
+		}
+
+		private static async Task<string[]> LoadJokes()
+		{
+			string[] jokesData = new string[4];
+			JokesModel jokes = await Jokes.LoadValue();
+
+			jokesData[0] = jokes.Setup;
+			jokesData[1] = jokes.Punchline;
+
+			Console.WriteLine($"There is a joke: \n" +
+				$"{jokesData[0]}\n" +
+				$"...\n" +
+				$"...\n" +
+				$"...\n" +
+				$"{jokesData[1]}");
+
+			return jokesData;
 		}
 	}
 }
