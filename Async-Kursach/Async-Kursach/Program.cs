@@ -26,7 +26,7 @@ namespace Async_Kursach
 			}
 			else if(userChoice == "2")
 			{
-
+				await LoadActivities();
 			}
 			else 
 			{
@@ -73,6 +73,12 @@ namespace Async_Kursach
 			activitiesData[1] = activities.Type;
 			activitiesData[2] = activities.Participants.ToString();
 			activitiesData[3] = activities.Price.ToString();
+
+			Console.WriteLine($"There is some interesting activity: \n" +
+				$"Activity - {activitiesData[0]} \n" +
+				$"Type - {activitiesData[1]} with \n" +
+				$"Participants - {activitiesData[2]} \n" +
+				$"Price - {activitiesData[3]}");
 
 			return activitiesData;
 		}
