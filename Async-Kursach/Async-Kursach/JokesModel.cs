@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Async_Kursach
+﻿namespace Async_Kursach
 {
-	class JokesModel
+	public class JokesModel
 	{
+		public string Setup { get; set; }
+		public string Punchline { get; set; }
 	}
 }
