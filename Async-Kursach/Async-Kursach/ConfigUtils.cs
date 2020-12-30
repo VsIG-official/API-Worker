@@ -1,8 +1,11 @@
 ﻿namespace Async_Kursach
 {
-	// static class for storing data
-	// mechanism for accessing the data
-	class ConfigUtils
+	/// <summary>
+	/// Static class for storing data
+	/// OR
+	/// Mechanism for accessing the data
+	/// </summary>
+	static class ConfigUtils
 	{
 		#region Fields
 
@@ -13,7 +16,7 @@
 		#region Properties
 
 		/// <summary>
-		/// Gets the number of seconds in a game
+		/// Gets the string for greeting for start application
 		/// </summary>
 		public static string Greeting
 		{
@@ -21,7 +24,7 @@
 		}
 
 		/// <summary>
-		/// Gets the number of seconds in a game
+		/// Gets the string for entering name
 		/// </summary>
 		public static string EnterName
 		{
@@ -29,7 +32,7 @@
 		}
 
 		/// <summary>
-		/// Gets the number of seconds in a game
+		/// Gets the string for entering wrong number
 		/// </summary>
 		public static string WrongNumber
 		{
@@ -41,7 +44,7 @@
 		#region Public methods
 
 		/// <summary>
-		/// Initializes the configuration data by creating the ConfigurationData object 
+		/// Initializes the configuration data by creating the ConfigData object 
 		/// </summary>
 		public static void Initialize()
 		{
