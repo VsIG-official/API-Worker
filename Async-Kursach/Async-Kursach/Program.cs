@@ -17,24 +17,31 @@ namespace Async_Kursach
 
 			string userChoice = Console.ReadLine();
 
-			if (userChoice == "1")
+			try
 			{
-				Console.WriteLine(ConfigUtils.EnterName);
-				string userName = Console.ReadLine();
+				if (userChoice == "1")
+				{
+					Console.WriteLine(ConfigUtils.EnterName);
+					string userName = Console.ReadLine();
 
-				await LoadNameInfo(userName);
+					await LoadNameInfo(userName);
+				}
+				else if (userChoice == "2")
+				{
+					await LoadActivities();
+				}
+				else if (userChoice == "3")
+				{
+					await LoadJokes();
+				}
+				else
+				{
+					Console.WriteLine(ConfigUtils.WrongNumber);
+				}
 			}
-			else if (userChoice == "2")
+			catch (Exception)
 			{
-				await LoadActivities();
-			}
-			else if (userChoice == "3")
-			{
-				await LoadJokes();
-			}
-			else
-			{
-				Console.WriteLine(ConfigUtils.WrongNumber);
+				Console.WriteLine("Something wrong with data. Try something else");
 			}
 
 			Console.ReadLine();
