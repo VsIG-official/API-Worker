@@ -39,6 +39,14 @@
 			get { return configData.WrongNumber; }
 		}
 
+		/// <summary>
+		/// Gets the string for wrong data
+		/// </summary>
+		public static string WrongData
+		{
+			get { return configData.WrongData; }
+		}
+
 		#endregion
 
 		#region Public methods

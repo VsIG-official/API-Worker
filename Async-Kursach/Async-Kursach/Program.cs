@@ -41,7 +41,7 @@ namespace Async_Kursach
 			}
 			catch (Exception)
 			{
-				Console.WriteLine("Something wrong with data. Try something else");
+				Console.WriteLine(ConfigUtils.WrongData);
 			}
 
 			Console.ReadLine();

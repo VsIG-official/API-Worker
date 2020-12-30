@@ -7,6 +7,7 @@
 	{
 		Greeting,
 		EnterName,
-		WrongNumber
+		WrongNumber,
+		WrongData
 	}
 }

@@ -18,6 +18,8 @@ namespace Async_Kursach
 		private Dictionary<ConfigDataValueName, string> values =
 			new Dictionary<ConfigDataValueName, string>();
 
+		#region StringsForValues
+
 		// Delete these strings and SetDefaultValues method, if
 		// You want the user always be connected to the internet
 		const string greeting = "Hi, My name is Async Kursach and I will " +
@@ -27,6 +29,9 @@ namespace Async_Kursach
 			"3 - get a joke";
 		const string enterName = "Enter Your name:";
 		const string wrongNumber = "That's the wrong number";
+		const string wrongData = "Something wrong with data. Try something else";
+
+		#endregion StringsForValues
 
 		#endregion
 
@@ -54,6 +59,14 @@ namespace Async_Kursach
 		public string WrongNumber
 		{
 			get { return values[ConfigDataValueName.WrongNumber]; }
+		}
+
+		/// <summary>
+		/// Gets the string for entering wrong number
+		/// </summary>
+		public string WrongData
+		{
+			get { return values[ConfigDataValueName.WrongData]; }
 		}
 
 		#endregion
@@ -117,6 +130,7 @@ namespace Async_Kursach
 			values.Add(ConfigDataValueName.Greeting, greeting);
 			values.Add(ConfigDataValueName.EnterName, enterName);
 			values.Add(ConfigDataValueName.WrongNumber, wrongNumber);
+			values.Add(ConfigDataValueName.WrongData, wrongData);
 		}
 
 		#endregion Methods
