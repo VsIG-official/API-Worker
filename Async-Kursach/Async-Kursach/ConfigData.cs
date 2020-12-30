@@ -4,9 +4,12 @@ using System.IO;
 
 namespace Async_Kursach
 {
-	// Class for storing information from 
-	// a csv or json file for using in other classes
-	// Container for data
+	/// <summary>
+	///	Class for storing information from
+	/// a csv or json file for using in other classes
+	/// OR
+	/// Container for data
+	/// </summary>
 	class ConfigData
 	{
 		#region Fields

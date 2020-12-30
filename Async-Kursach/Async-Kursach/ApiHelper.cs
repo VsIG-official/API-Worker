@@ -15,7 +15,7 @@ namespace Async_Kursach
 		{
 			ApiClient = new HttpClient
 			{
-				// a lot of adresses will begin with the same string, 
+				// a lot of adresses will begin with the same string,
 				// so We can put the beginning here
 				// but won't, because We need more than one adress
 				/*

@@ -44,7 +44,7 @@
 		#region Public methods
 
 		/// <summary>
-		/// Initializes the configuration data by creating the ConfigData object 
+		/// Initializes the configuration data by creating the ConfigData object
 		/// </summary>
 		public static void Initialize()
 		{

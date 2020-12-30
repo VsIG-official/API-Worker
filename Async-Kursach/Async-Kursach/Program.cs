@@ -24,7 +24,7 @@ namespace Async_Kursach
 
 				await LoadNameInfo(userName);
 			}
-			else if(userChoice == "2")
+			else if (userChoice == "2")
 			{
 				await LoadActivities();
 			}
@@ -32,7 +32,7 @@ namespace Async_Kursach
 			{
 				await LoadJokes();
 			}
-			else 
+			else
 			{
 				Console.WriteLine("That's the wrong number");
 			}
