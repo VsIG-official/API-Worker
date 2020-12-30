@@ -47,6 +47,14 @@
 			get { return configData.WrongData; }
 		}
 
+		/// <summary>
+		/// Gets the string for wrong data
+		/// </summary>
+		public static string NextChoice
+		{
+			get { return configData.NextChoice; }
+		}
+
 		#endregion Properties
 
 		#region PublicMethods

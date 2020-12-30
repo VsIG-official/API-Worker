@@ -1,4 +1,5 @@
-Greeting;Hi, My name is Async Kursach and I will help You to have some fun!/n Which one do You want to do?\n 1 - to predict some data, depending on Your name\n 2 - find something to do by getting suggestions for random activities\n 3 - get a joke
+Greeting;Hi, My name is Async Kursach and I will help You to have some fun!/n Which one do You want to do?\n 1 - to predict some data, depending on Your name\n 2 - find something to do by getting suggestions for random activities\n 3 - get a joke \n 4 - do everything
 EnterName;Enter Your name:
 WrongNumber;That's the wrong number
 WrongData;Something wrong with data. Try something else
+NextChoice;And What will be Your next choice?

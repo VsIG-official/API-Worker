@@ -37,6 +37,17 @@ namespace Async_Kursach
 				{
 					await LoadJokes();
 				}
+				else if (userChoice == "4")
+				{
+					Console.WriteLine(ConfigUtils.EnterName);
+					string userName = Console.ReadLine();
+
+					await LoadNameInfo(userName);
+					Console.WriteLine();
+					await LoadActivities();
+					Console.WriteLine();
+					await LoadJokes();
+				}
 				else
 				{
 					Console.WriteLine(ConfigUtils.WrongNumber);

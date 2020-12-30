@@ -8,6 +8,7 @@
 		Greeting,
 		EnterName,
 		WrongNumber,
-		WrongData
+		WrongData,
+		NextChoice
 	}
 }
