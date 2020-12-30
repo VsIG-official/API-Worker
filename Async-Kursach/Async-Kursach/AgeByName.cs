@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
+	/// <summary>
+	/// Access Agify API
+	/// </summary>
 	public class AgeByName
 	{
 		private const string defaultString = "Valentyn";

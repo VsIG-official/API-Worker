@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
+	/// <summary>
+	/// Access Genderize API
+	/// </summary>
 	public class GenderByName
 	{
 		private const string defaultString = "Valentyn";

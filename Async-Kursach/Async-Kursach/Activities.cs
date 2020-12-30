@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
+	/// <summary>
+	/// Access Activity API
+	/// </summary>
 	public class Activities
 	{
 		public static async Task<ActivitiesModel> LoadValue()

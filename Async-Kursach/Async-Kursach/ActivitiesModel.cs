@@ -1,5 +1,8 @@
 ﻿namespace Async_Kursach
 {
+	/// <summary>
+	/// Model for getting values from json
+	/// </summary>
 	public class ActivitiesModel
 	{
 		public string Activity { get; set; }

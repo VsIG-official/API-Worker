@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
+	/// <summary>
+	/// Access Jokes API
+	/// </summary>
 	public class Jokes
 	{
 		public static async Task<JokesModel> LoadValue()
