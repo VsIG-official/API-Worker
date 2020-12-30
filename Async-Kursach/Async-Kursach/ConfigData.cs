@@ -15,16 +15,26 @@ namespace Async_Kursach
 		Dictionary<ConfigDataValueName, string> values =
 			new Dictionary<ConfigDataValueName, string>();
 
+		// delete these strings and SetDefaultValues method, if 
+		// You want the user always be connected to the internet
+		const string greeting = "Hi, My name is Async Kursach and I will " +
+			"help You to have some fun!/n Which one do You want to do?\n " +
+			"1 - to predict some data, depending on Your name\n " +
+			"2 - find something to do by getting suggestions for random activities\n " +
+			"3 - get a joke";
+		const string enterName = "Enter Your name:";
+		const string wrongNumber = "That's the wrong number";
+
 		#endregion
 
 		#region Properties
 
 		/// <summary>
-		/// Gets the number of seconds in a game
+		/// Gets the greeting for start application
 		/// </summary>
-		public int TotalGameSeconds
+		public string Greeting
 		{
-			get { return (int)values[ConfigDataValueName.]; }
+			get { return values[ConfigDataValueName.Greeting]; }
 		}
 
 		#endregion
@@ -55,7 +65,7 @@ namespace Async_Kursach
 					ConfigDataValueName valueName =
 						(ConfigDataValueName)Enum.Parse(
 							typeof(ConfigDataValueName), tokens[0]);
-					values.Add(valueName, string.Parse(tokens[1]));
+					values.Add(valueName, tokens[1]);
 					currentLine = input.ReadLine();
 				}
 			}
@@ -83,7 +93,9 @@ namespace Async_Kursach
 		void SetDefaultValues()
 		{
 			values.Clear();
-			values.Add(ConfigDataValueName.TotalGameSeconds, 30);
+			values.Add(ConfigDataValueName.Greeting, greeting);
+			values.Add(ConfigDataValueName.EnterName, enterName);
+			values.Add(ConfigDataValueName.WrongNumber, wrongNumber);
 		}
 	}
 }
