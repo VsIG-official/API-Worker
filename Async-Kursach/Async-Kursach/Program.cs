@@ -72,8 +72,8 @@ namespace Async_Kursach
 			Console.WriteLine(ConfigUtils.EnterName);
 			string userName = Console.ReadLine();
 
-			int age = await LoadNameAge(userName);
-			string[] genderData = await LoadNameGender(userName);
+			int age = await LoadNameAge(userName).ConfigureAwait(false);
+			string[] genderData = await LoadNameGender(userName).ConfigureAwait(false);
 
 			Console.WriteLine($"Here some data for {userName} name: \n" +
 				$"Your predicted age is {age} \n" +
@@ -116,7 +116,7 @@ namespace Async_Kursach
 		private static async Task<string[]> LoadActivities()
 		{
 			string[] activitiesData = new string[4];
-			ActivitiesModel activities = await Activities.LoadValue();
+			ActivitiesModel activities = await Activities.LoadValue().ConfigureAwait(false);
 
 			activitiesData[0] = activities.Activity;
 			activitiesData[1] = activities.Type;
@@ -139,7 +139,7 @@ namespace Async_Kursach
 		private static async Task<string[]> LoadJokes()
 		{
 			string[] jokesData = new string[2];
-			JokesModel jokes = await Jokes.LoadValue();
+			JokesModel jokes = await Jokes.LoadValue().ConfigureAwait(false);
 
 			jokesData[0] = jokes.Setup;
 			jokesData[1] = jokes.Punchline;
