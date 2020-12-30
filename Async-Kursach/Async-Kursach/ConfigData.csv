@@ -1,0 +1,3 @@
+Greeting;Hi, My name is Async Kursach and I will help You to have some fun!/n Which one do You want to do?\n 1 - to predict some data, depending on Your name\n 2 - find something to do by getting suggestions for random activities\n 3 - get a joke
+EnterName;Enter Your name:
+WrongNumber;That's the wrong number
