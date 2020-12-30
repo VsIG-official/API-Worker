@@ -6,7 +6,8 @@ namespace Async_Kursach
 {
 	public class GenderByName
 	{
-		const string defaultString = "Valentyn";
+		private const string defaultString = "Valentyn";
+
 		public static async Task<GenderByNameModel> LoadValue(string text)
 		{
 			string url;
@@ -40,4 +41,3 @@ namespace Async_Kursach
 		}
 	}
 }
-

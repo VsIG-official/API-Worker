@@ -6,7 +6,8 @@ namespace Async_Kursach
 {
 	public class AgeByName
 	{
-		const string defaultString = "Valentyn";
+		private const string defaultString = "Valentyn";
+
 		public static async Task<AgeByNameModel> LoadValue(string text)
 		{
 			string url;
