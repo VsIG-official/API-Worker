@@ -56,11 +56,11 @@ namespace Async_Kursach
 		/// </summary>
 		private static async Task CallAllAPI()
 		{
-			await LoadNameInfo();
+			await LoadNameInfo().ConfigureAwait(false);
 			Console.WriteLine();
-			await LoadActivities();
+			await LoadActivities().ConfigureAwait(false);
 			Console.WriteLine();
-			await LoadJokes();
+			await LoadJokes().ConfigureAwait(false);
 		}
 
 		/// <summary>
@@ -88,7 +88,7 @@ namespace Async_Kursach
 		/// <returns> age </returns>
 		private static async Task<int> LoadNameAge(string name)
 		{
-			AgeByNameModel age = await AgeByName.LoadValue(name);
+			AgeByNameModel age = await AgeByName.LoadValue(name).ConfigureAwait(false);
 
 			return age.Age;
 		}
@@ -101,7 +101,7 @@ namespace Async_Kursach
 		private static async Task<string[]> LoadNameGender(string name)
 		{
 			string[] genderData = new string[2];
-			GenderByNameModel gender = await GenderByName.LoadValue(name);
+			GenderByNameModel gender = await GenderByName.LoadValue(name).ConfigureAwait(false);
 
 			genderData[0] = gender.Gender;
 			genderData[1] = gender.Probability.ToString();
