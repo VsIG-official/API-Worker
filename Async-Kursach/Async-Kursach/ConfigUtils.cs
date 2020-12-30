@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
-	/// <summary>
-	/// Class for storing information from 
-	/// a csv or json file for using in other classes
-	/// </summary>
-	class ConfigData
+	// static class for storing data
+	// mechanism for accessing the data
+	class ConfigUtils
 	{
 
 	}
