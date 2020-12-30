@@ -10,9 +10,8 @@ namespace Async_Kursach
 			ApiHelper.InitializeClient();
 
 			Console.WriteLine("Hi, My name is Async Kursach and " +
-				"I will help You to have some fun!");
-			Console.WriteLine("Which one do You want to do?");
-			Console.WriteLine("1 - to predict some data, depending on Your name\n" +
+				"I will help You to have some fun!/n Which one do You want to do?\n" +
+				"1 - to predict some data, depending on Your name\n" +
 				"2 - find something to do by getting suggestions for random activities\n" +
 				"3 - get a joke");
 
@@ -40,6 +39,7 @@ namespace Async_Kursach
 
 			Console.ReadLine();
 		}
+
 		private static async Task LoadNameInfo(string name)
 		{
 			int age = await LoadNameAge(name);
@@ -90,7 +90,7 @@ namespace Async_Kursach
 
 		private static async Task<string[]> LoadJokes()
 		{
-			string[] jokesData = new string[4];
+			string[] jokesData = new string[2];
 			JokesModel jokes = await Jokes.LoadValue();
 
 			jokesData[0] = jokes.Setup;
