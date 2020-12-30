@@ -1,43 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Async_Kursach
+﻿namespace Async_Kursach
 {
 	// static class for storing data
 	// mechanism for accessing the data
 	class ConfigUtils
 	{
-        #region Fields
+		#region Fields
 
-        static ConfigData configData;
+		static ConfigData configData;
 
-        #endregion
+		#endregion
 
-        #region Properties
+		#region Properties
 
-        /// <summary>
-        /// Gets the number of seconds in a game
-        /// </summary>
-        public static int Greeting
-        {
-            get { return configData.Greeting; }
-        }
+		/// <summary>
+		/// Gets the number of seconds in a game
+		/// </summary>
+		public static string Greeting
+		{
+			get { return configData.Greeting; }
+		}
 
-        #endregion
+		/// <summary>
+		/// Gets the number of seconds in a game
+		/// </summary>
+		public static string EnterName
+		{
+			get { return configData.EnterName; }
+		}
 
-        #region Public methods
+		/// <summary>
+		/// Gets the number of seconds in a game
+		/// </summary>
+		public static string WrongNumber
+		{
+			get { return configData.WrongNumber; }
+		}
 
-        /// <summary>
-        /// Initializes the configuration data by creating the ConfigurationData object 
-        /// </summary>
-        public static void Initialize()
-        {
-            configData = new ConfigData();
-        }
+		#endregion
 
-        #endregion
-    }
+		#region Public methods
+
+		/// <summary>
+		/// Initializes the configuration data by creating the ConfigurationData object 
+		/// </summary>
+		public static void Initialize()
+		{
+			configData = new ConfigData();
+		}
+
+		#endregion
+	}
 }
