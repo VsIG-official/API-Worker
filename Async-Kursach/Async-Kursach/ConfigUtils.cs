@@ -5,13 +5,13 @@
 	/// OR
 	/// Mechanism for accessing the data
 	/// </summary>
-	static class ConfigUtils
+	internal static class ConfigUtils
 	{
 		#region Fields
 
-		static ConfigData configData;
+		private static ConfigData configData;
 
-		#endregion
+		#endregion Fields
 
 		#region Properties
 
@@ -47,9 +47,9 @@
 			get { return configData.WrongData; }
 		}
 
-		#endregion
+		#endregion Properties
 
-		#region Public methods
+		#region PublicMethods
 
 		/// <summary>
 		/// Initializes the configuration data by creating the ConfigData object
@@ -59,6 +59,6 @@
 			configData = new ConfigData();
 		}
 
-		#endregion
+		#endregion PublicMethods
 	}
 }

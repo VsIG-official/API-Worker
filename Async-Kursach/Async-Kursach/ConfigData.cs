@@ -10,11 +10,12 @@ namespace Async_Kursach
 	/// OR
 	/// Container for data
 	/// </summary>
-	class ConfigData
+	internal class ConfigData
 	{
 		#region Fields
 
-		const string ConfigDataFileName = "ConfigData.csv";
+		private const string ConfigDataFileName = "ConfigData.csv";
+
 		private Dictionary<ConfigDataValueName, string> values =
 			new Dictionary<ConfigDataValueName, string>();
 
@@ -22,18 +23,19 @@ namespace Async_Kursach
 
 		// Delete these strings and SetDefaultValues method, if
 		// You want the user always be connected to the internet
-		const string greeting = "Hi, My name is Async Kursach and I will " +
+		private const string greeting = "Hi, My name is Async Kursach and I will " +
 			"help You to have some fun!/n Which one do You want to do?\n " +
 			"1 - to predict some data, depending on Your name\n " +
 			"2 - find something to do by getting suggestions for random activities\n " +
 			"3 - get a joke";
-		const string enterName = "Enter Your name:";
-		const string wrongNumber = "That's the wrong number";
-		const string wrongData = "Something wrong with data. Try something else";
+
+		private const string enterName = "Enter Your name:";
+		private const string wrongNumber = "That's the wrong number";
+		private const string wrongData = "Something wrong with data. Try something else";
 
 		#endregion StringsForValues
 
-		#endregion
+		#endregion Fields
 
 		#region Properties
 
@@ -69,7 +71,7 @@ namespace Async_Kursach
 			get { return values[ConfigDataValueName.WrongData]; }
 		}
 
-		#endregion
+		#endregion Properties
 
 		#region Constructor
 
@@ -116,7 +118,7 @@ namespace Async_Kursach
 			}
 		}
 
-		#endregion
+		#endregion Constructor
 
 		#region Methods
 
@@ -124,7 +126,7 @@ namespace Async_Kursach
 		/// Sets the configuration data fields to default values
 		/// csv string
 		/// </summary>
-		void SetDefaultValues()
+		private void SetDefaultValues()
 		{
 			values.Clear();
 			values.Add(ConfigDataValueName.Greeting, greeting);
