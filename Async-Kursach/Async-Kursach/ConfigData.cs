@@ -16,7 +16,7 @@ namespace Async_Kursach
 
 		private const string ConfigDataFileName = "ConfigData.csv";
 
-		private Dictionary<ConfigDataValueName, string> values =
+		private readonly Dictionary<ConfigDataValueName, string> values =
 			new Dictionary<ConfigDataValueName, string>();
 
 		#region StringsForValues

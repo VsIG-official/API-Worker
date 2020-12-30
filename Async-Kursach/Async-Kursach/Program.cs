@@ -24,29 +24,19 @@ namespace Async_Kursach
 			{
 				if (userChoice == "1")
 				{
-					Console.WriteLine(ConfigUtils.EnterName);
-					string userName = Console.ReadLine();
-
-					await LoadNameInfo(userName);
+					await LoadNameInfo().ConfigureAwait(false);
 				}
 				else if (userChoice == "2")
 				{
-					await LoadActivities();
+					await LoadActivities().ConfigureAwait(false);
 				}
 				else if (userChoice == "3")
 				{
-					await LoadJokes();
+					await LoadJokes().ConfigureAwait(false);
 				}
 				else if (userChoice == "4")
 				{
-					Console.WriteLine(ConfigUtils.EnterName);
-					string userName = Console.ReadLine();
-
-					await LoadNameInfo(userName);
-					Console.WriteLine();
-					await LoadActivities();
-					Console.WriteLine();
-					await LoadJokes();
+					await CallAllAPI().ConfigureAwait(false);
 				}
 				else
 				{
@@ -62,15 +52,30 @@ namespace Async_Kursach
 		}
 
 		/// <summary>
+		/// Calls all API.
+		/// </summary>
+		private static async Task CallAllAPI()
+		{
+			await LoadNameInfo();
+			Console.WriteLine();
+			await LoadActivities();
+			Console.WriteLine();
+			await LoadJokes();
+		}
+
+		/// <summary>
 		/// Loads the name information from API
 		/// </summary>
 		/// <param name="name">Name of person</param>
-		private static async Task LoadNameInfo(string name)
+		private static async Task LoadNameInfo()
 		{
-			int age = await LoadNameAge(name);
-			string[] genderData = await LoadNameGender(name);
+			Console.WriteLine(ConfigUtils.EnterName);
+			string userName = Console.ReadLine();
 
-			Console.WriteLine($"Here some data for {name} name: \n" +
+			int age = await LoadNameAge(userName);
+			string[] genderData = await LoadNameGender(userName);
+
+			Console.WriteLine($"Here some data for {userName} name: \n" +
 				$"Your predicted age is {age} \n" +
 				$"Your predicted gender is {genderData[0]} with " +
 				$"probability of {genderData[1]}");
