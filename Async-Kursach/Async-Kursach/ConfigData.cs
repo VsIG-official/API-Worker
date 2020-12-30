@@ -12,7 +12,7 @@ namespace Async_Kursach
 		#region Fields
 
 		const string ConfigDataFileName = "ConfigData.csv";
-		Dictionary<ConfigDataValueName, string> values =
+		private Dictionary<ConfigDataValueName, string> values =
 			new Dictionary<ConfigDataValueName, string>();
 
 		// delete these strings and SetDefaultValues method, if 
@@ -30,11 +30,27 @@ namespace Async_Kursach
 		#region Properties
 
 		/// <summary>
-		/// Gets the greeting for start application
+		/// Gets the string for greeting for start application
 		/// </summary>
 		public string Greeting
 		{
 			get { return values[ConfigDataValueName.Greeting]; }
+		}
+
+		/// <summary>
+		/// Gets the string for entering name
+		/// </summary>
+		public string EnterName
+		{
+			get { return values[ConfigDataValueName.EnterName]; }
+		}
+
+		/// <summary>
+		/// Gets the string for entering wrong number
+		/// </summary>
+		public string WrongNumber
+		{
+			get { return values[ConfigDataValueName.WrongNumber]; }
 		}
 
 		#endregion
