@@ -18,7 +18,7 @@ namespace Async_Kursach
 		private Dictionary<ConfigDataValueName, string> values =
 			new Dictionary<ConfigDataValueName, string>();
 
-		// delete these strings and SetDefaultValues method, if 
+		// Delete these strings and SetDefaultValues method, if
 		// You want the user always be connected to the internet
 		const string greeting = "Hi, My name is Async Kursach and I will " +
 			"help You to have some fun!/n Which one do You want to do?\n " +
@@ -105,6 +105,8 @@ namespace Async_Kursach
 
 		#endregion
 
+		#region Methods
+
 		/// <summary>
 		/// Sets the configuration data fields to default values
 		/// csv string
@@ -116,5 +118,7 @@ namespace Async_Kursach
 			values.Add(ConfigDataValueName.EnterName, enterName);
 			values.Add(ConfigDataValueName.WrongNumber, wrongNumber);
 		}
+
+		#endregion Methods
 	}
 }

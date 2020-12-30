@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
+	/// <summary>
+	/// Start point of program
+	/// </summary>
 	class Program
 	{
 		static async Task Main()
@@ -40,6 +43,10 @@ namespace Async_Kursach
 			Console.ReadLine();
 		}
 
+		/// <summary>
+		/// Loads the name information from API
+		/// </summary>
+		/// <param name="name">Name of person</param>
 		private static async Task LoadNameInfo(string name)
 		{
 			int age = await LoadNameAge(name);
@@ -51,6 +58,11 @@ namespace Async_Kursach
 				$"probability of {genderData[1]}");
 		}
 
+		/// <summary>
+		/// Loads the name age from API
+		/// </summary>
+		/// <param name="name">Name of person</param>
+		/// <returns> age </returns>
 		private static async Task<int> LoadNameAge(string name)
 		{
 			AgeByNameModel age = await AgeByName.LoadValue(name);
@@ -58,6 +70,11 @@ namespace Async_Kursach
 			return age.Age;
 		}
 
+		/// <summary>
+		/// Loads the name gender from API
+		/// </summary>
+		/// <param name="name">Name of person</param>
+		/// <returns> array with data </returns>
 		private static async Task<string[]> LoadNameGender(string name)
 		{
 			string[] genderData = new string[2];
@@ -69,6 +86,10 @@ namespace Async_Kursach
 			return genderData;
 		}
 
+		/// <summary>
+		/// Loads the activities from API
+		/// </summary>
+		/// <returns> array with data </returns>
 		private static async Task<string[]> LoadActivities()
 		{
 			string[] activitiesData = new string[4];
@@ -88,6 +109,10 @@ namespace Async_Kursach
 			return activitiesData;
 		}
 
+		/// <summary>
+		/// Loads the jokes from API
+		/// </summary>
+		/// <returns> array with data </returns>
 		private static async Task<string[]> LoadJokes()
 		{
 			string[] jokesData = new string[2];
