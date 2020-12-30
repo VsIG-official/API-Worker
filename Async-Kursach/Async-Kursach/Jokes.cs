@@ -4,8 +4,14 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
+	/// <summary>
+	/// Access Jokes API
+	/// </summary>
 	public class Jokes
 	{
+		/// <summary>
+		/// Loads specific value
+		/// </summary>
 		public static async Task<JokesModel> LoadValue()
 		{
 			string url = "https://official-joke-api.appspot.com/random_joke";

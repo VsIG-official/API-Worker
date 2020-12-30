@@ -4,9 +4,16 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
+	/// <summary>
+	/// Access Agify API
+	/// </summary>
 	public class AgeByName
 	{
-		const string defaultString = "Valentyn";
+		private const string defaultString = "Valentyn";
+
+		/// <summary>
+		/// Loads specific value
+		/// </summary>
 		public static async Task<AgeByNameModel> LoadValue(string text)
 		{
 			string url;

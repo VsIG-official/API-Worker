@@ -11,11 +11,14 @@ namespace Async_Kursach
 		// Create static, 'cause We need one client per application
 		public static HttpClient ApiClient { get; set; }
 
-		public static void InitializeClient()
+		/// <summary>
+		/// Initializes API client
+		/// </summary>
+		public static void Initialize()
 		{
 			ApiClient = new HttpClient
 			{
-				// a lot of adresses will begin with the same string, 
+				// a lot of adresses will begin with the same string,
 				// so We can put the beginning here
 				// but won't, because We need more than one adress
 				/*

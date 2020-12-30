@@ -54,7 +54,9 @@
     <Compile Include="AgeByName.cs" />
     <Compile Include="AgeByNameModel.cs" />
     <Compile Include="ApiHelper.cs" />
-    <Compile Include="ConfigurationData.cs" />
+    <Compile Include="ConfigData.cs" />
+    <Compile Include="ConfigDataValueName.cs" />
+    <Compile Include="ConfigUtils.cs" />
     <Compile Include="GenderByName.cs" />
     <Compile Include="GenderByNameModel.cs" />
     <Compile Include="Jokes.cs" />

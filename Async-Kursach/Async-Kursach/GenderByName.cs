@@ -4,9 +4,16 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
+	/// <summary>
+	/// Access Genderize API
+	/// </summary>
 	public class GenderByName
 	{
-		const string defaultString = "Valentyn";
+		private const string defaultString = "Valentyn";
+
+		/// <summary>
+		/// Loads specific value
+		/// </summary>
 		public static async Task<GenderByNameModel> LoadValue(string text)
 		{
 			string url;
@@ -40,4 +47,3 @@ namespace Async_Kursach
 		}
 	}
 }
-

@@ -3,43 +3,57 @@ using System.Threading.Tasks;
 
 namespace Async_Kursach
 {
-	class Program
+	/// <summary>
+	/// Start point of program
+	/// </summary>
+	internal class Program
 	{
-		static async Task Main()
+		/// <summary>
+		/// Defines the entry point of the application.
+		/// </summary>
+		private static async Task Main()
 		{
-			ApiHelper.InitializeClient();
+			ApiHelper.Initialize();
+			ConfigUtils.Initialize();
 
-			Console.WriteLine("Hi, My name is Async Kursach and " +
-				"I will help You to have some fun!/n Which one do You want to do?\n" +
-				"1 - to predict some data, depending on Your name\n" +
-				"2 - find something to do by getting suggestions for random activities\n" +
-				"3 - get a joke");
+			Console.WriteLine(ConfigUtils.Greeting);
 
 			string userChoice = Console.ReadLine();
 
-			if (userChoice == "1")
+			try
 			{
-				Console.WriteLine("Enter Your name:");
-				string userName = Console.ReadLine();
+				if (userChoice == "1")
+				{
+					Console.WriteLine(ConfigUtils.EnterName);
+					string userName = Console.ReadLine();
 
-				await LoadNameInfo(userName);
+					await LoadNameInfo(userName);
+				}
+				else if (userChoice == "2")
+				{
+					await LoadActivities();
+				}
+				else if (userChoice == "3")
+				{
+					await LoadJokes();
+				}
+				else
+				{
+					Console.WriteLine(ConfigUtils.WrongNumber);
+				}
 			}
-			else if(userChoice == "2")
+			catch (Exception)
 			{
-				await LoadActivities();
-			}
-			else if (userChoice == "3")
-			{
-				await LoadJokes();
-			}
-			else 
-			{
-				Console.WriteLine("That's the wrong number");
+				Console.WriteLine(ConfigUtils.WrongData);
 			}
 
 			Console.ReadLine();
 		}
 
+		/// <summary>
+		/// Loads the name information from API
+		/// </summary>
+		/// <param name="name">Name of person</param>
 		private static async Task LoadNameInfo(string name)
 		{
 			int age = await LoadNameAge(name);
@@ -51,6 +65,11 @@ namespace Async_Kursach
 				$"probability of {genderData[1]}");
 		}
 
+		/// <summary>
+		/// Loads the name age from API
+		/// </summary>
+		/// <param name="name">Name of person</param>
+		/// <returns> age </returns>
 		private static async Task<int> LoadNameAge(string name)
 		{
 			AgeByNameModel age = await AgeByName.LoadValue(name);
@@ -58,6 +77,11 @@ namespace Async_Kursach
 			return age.Age;
 		}
 
+		/// <summary>
+		/// Loads the name gender from API
+		/// </summary>
+		/// <param name="name">Name of person</param>
+		/// <returns> array with data </returns>
 		private static async Task<string[]> LoadNameGender(string name)
 		{
 			string[] genderData = new string[2];
@@ -69,6 +93,10 @@ namespace Async_Kursach
 			return genderData;
 		}
 
+		/// <summary>
+		/// Loads the activities from API
+		/// </summary>
+		/// <returns> array with data </returns>
 		private static async Task<string[]> LoadActivities()
 		{
 			string[] activitiesData = new string[4];
@@ -88,6 +116,10 @@ namespace Async_Kursach
 			return activitiesData;
 		}
 
+		/// <summary>
+		/// Loads the jokes from API
+		/// </summary>
+		/// <returns> array with data </returns>
 		private static async Task<string[]> LoadJokes()
 		{
 			string[] jokesData = new string[2];
