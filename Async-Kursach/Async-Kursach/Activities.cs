@@ -9,6 +9,9 @@ namespace Async_Kursach
 	/// </summary>
 	public class Activities
 	{
+		/// <summary>
+		/// Loads specific value
+		/// </summary>
 		public static async Task<ActivitiesModel> LoadValue()
 		{
 			string url = "https://www.boredapi.com/api/activity";

@@ -11,6 +11,9 @@ namespace Async_Kursach
 	{
 		private const string defaultString = "Valentyn";
 
+		/// <summary>
+		/// Loads specific value
+		/// </summary>
 		public static async Task<GenderByNameModel> LoadValue(string text)
 		{
 			string url;

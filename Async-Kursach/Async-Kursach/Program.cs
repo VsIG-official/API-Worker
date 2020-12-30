@@ -8,9 +8,12 @@ namespace Async_Kursach
 	/// </summary>
 	internal class Program
 	{
+		/// <summary>
+		/// Defines the entry point of the application.
+		/// </summary>
 		private static async Task Main()
 		{
-			ApiHelper.InitializeClient();
+			ApiHelper.Initialize();
 			ConfigUtils.Initialize();
 
 			Console.WriteLine(ConfigUtils.Greeting);
