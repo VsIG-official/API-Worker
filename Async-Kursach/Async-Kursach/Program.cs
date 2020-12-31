@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Async_Kursach
@@ -8,13 +9,15 @@ namespace Async_Kursach
 	/// </summary>
 	internal class Program
 	{
+		static readonly Dictionary<string, Action> operations
+			= new Dictionary<string, Action>();
+
 		/// <summary>
 		/// Defines the entry point of the application.
 		/// </summary>
-		private static async Task Main()
+		private static void Main()
 		{
-			ApiHelper.Initialize();
-			ConfigUtils.Initialize();
+			Initialization();
 
 			Console.WriteLine(ConfigUtils.Greeting);
 
@@ -22,26 +25,7 @@ namespace Async_Kursach
 
 			try
 			{
-				if (userChoice == "1")
-				{
-					await LoadNameInfo().ConfigureAwait(false);
-				}
-				else if (userChoice == "2")
-				{
-					await LoadActivities().ConfigureAwait(false);
-				}
-				else if (userChoice == "3")
-				{
-					await LoadJokes().ConfigureAwait(false);
-				}
-				else if (userChoice == "4")
-				{
-					await CallAllAPI().ConfigureAwait(false);
-				}
-				else
-				{
-					Console.WriteLine(ConfigUtils.WrongNumber);
-				}
+				operations[userChoice].Invoke();
 			}
 			catch (Exception)
 			{
@@ -49,6 +33,27 @@ namespace Async_Kursach
 			}
 
 			Console.ReadLine();
+		}
+
+		/// <summary>
+		/// Initialization of things
+		/// </summary>
+		private static void Initialization()
+		{
+			ApiHelper.Initialize();
+			ConfigUtils.Initialize();
+			CreateOperations();
+		}
+
+		/// <summary>
+		/// Replacement of if-else
+		/// </summary>
+		private static void CreateOperations()
+		{
+			operations["1"] = async () => { await LoadNameInfo().ConfigureAwait(false); };
+			operations["2"] = async () => { await LoadActivities().ConfigureAwait(false); };
+			operations["3"] = async () => { await LoadJokes().ConfigureAwait(false); };
+			operations["4"] = async () => { await CallAllAPI().ConfigureAwait(false); };
 		}
 
 		/// <summary>
@@ -144,7 +149,7 @@ namespace Async_Kursach
 			jokesData[0] = jokes.Setup;
 			jokesData[1] = jokes.Punchline;
 
-			Console.WriteLine($"There is a joke: \n" +
+			Console.WriteLine($"Here comes the joke: \n" +
 				$"{jokesData[0]}\n" +
 				$"...\n" +
 				$"...\n" +
