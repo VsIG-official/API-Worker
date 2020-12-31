@@ -17,10 +17,26 @@ namespace Async_Kursach
 		/// </summary>
 		private static void Main()
 		{
-			Initialization();
+			Initialize();
 
+			LoadGreeting();
+		}
+
+		/// <summary>
+		/// Load greeting and begin choices method
+		/// </summary>
+		static void LoadGreeting()
+		{
 			Console.WriteLine(ConfigUtils.Greeting);
 
+			LoadChoices();
+		}
+
+		/// <summary>
+		/// Load and operate with choices
+		/// </summary>
+		static void LoadChoices()
+		{
 			string userChoice = Console.ReadLine();
 
 			try
@@ -38,7 +54,7 @@ namespace Async_Kursach
 		/// <summary>
 		/// Initialization of things
 		/// </summary>
-		private static void Initialization()
+		private static void Initialize()
 		{
 			ApiHelper.Initialize();
 			ConfigUtils.Initialize();
