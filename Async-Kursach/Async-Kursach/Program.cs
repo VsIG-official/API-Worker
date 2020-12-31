@@ -37,6 +37,8 @@ namespace Async_Kursach
 		/// </summary>
 		static void LoadChoices()
 		{
+			Console.WriteLine(ConfigUtils.NextChoice);
+
 			string userChoice = Console.ReadLine();
 
 			try

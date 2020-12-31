@@ -24,15 +24,14 @@ namespace Async_Kursach
 		// Delete these strings and SetDefaultValues method, if
 		// You want the user always be connected to the internet
 		private const string greeting = "Hi, My name is Async Kursach and I will " +
-			"help You to have some fun!/n Which one do You want to do?\n " +
-			"1 - to predict some data, depending on Your name\n " +
-			"2 - find something to do by getting suggestions for random activities\n " +
-			"3 - get a joke\n 4 - do everything";
-
+			"help You to have some fun!/n";
+		private const string nextChoice = " Which one do You want to do?\n" +
+			"1 - to predict some data, depending on Your name\n" +
+			"2 - find something to do by getting suggestions for random activities\n" +
+			"3 - get a joke \n 4 - do everything";
 		private const string enterName = "Enter Your name:";
 		private const string wrongNumber = "That's the wrong number";
 		private const string wrongData = "Something wrong with data. Try something else";
-		private const string nextChoice = "And What will be Your next choice?";
 
 		#endregion StringsForValues
 
