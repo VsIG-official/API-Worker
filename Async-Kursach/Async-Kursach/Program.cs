@@ -50,10 +50,14 @@ namespace Async_Kursach
 		/// </summary>
 		private static void CreateOperations()
 		{
-			operations["1"] = async () => { await LoadNameInfo().ConfigureAwait(false); };
-			operations["2"] = async () => { await LoadActivities().ConfigureAwait(false); };
-			operations["3"] = async () => { await LoadJokes().ConfigureAwait(false); };
-			operations["4"] = async () => { await CallAllAPI().ConfigureAwait(false); };
+			operations["1"] = async () => { await
+				LoadNameInfo().ConfigureAwait(false); };
+			operations["2"] = async () => { await
+				LoadActivities().ConfigureAwait(false); };
+			operations["3"] = async () => { await
+				LoadJokes().ConfigureAwait(false); };
+			operations["4"] = async () => { await
+				CallAllAPI().ConfigureAwait(false); };
 		}
 
 		/// <summary>
@@ -77,8 +81,10 @@ namespace Async_Kursach
 			Console.WriteLine(ConfigUtils.EnterName);
 			string userName = Console.ReadLine();
 
-			int age = await LoadNameAge(userName).ConfigureAwait(false);
-			string[] genderData = await LoadNameGender(userName).ConfigureAwait(false);
+			int age = await LoadNameAge(userName).
+				ConfigureAwait(false);
+			string[] genderData = await LoadNameGender
+				(userName).ConfigureAwait(false);
 
 			Console.WriteLine($"Here some data for {userName} name: \n" +
 				$"Your predicted age is {age} \n" +
@@ -93,7 +99,8 @@ namespace Async_Kursach
 		/// <returns> age </returns>
 		private static async Task<int> LoadNameAge(string name)
 		{
-			AgeByNameModel age = await AgeByName.LoadValue(name).ConfigureAwait(false);
+			AgeByNameModel age = await AgeByName.
+				LoadValue(name).ConfigureAwait(false);
 
 			return age.Age;
 		}
@@ -106,7 +113,8 @@ namespace Async_Kursach
 		private static async Task<string[]> LoadNameGender(string name)
 		{
 			string[] genderData = new string[2];
-			GenderByNameModel gender = await GenderByName.LoadValue(name).ConfigureAwait(false);
+			GenderByNameModel gender = await GenderByName.
+				LoadValue(name).ConfigureAwait(false);
 
 			genderData[0] = gender.Gender;
 			genderData[1] = gender.Probability.ToString();
@@ -121,7 +129,8 @@ namespace Async_Kursach
 		private static async Task<string[]> LoadActivities()
 		{
 			string[] activitiesData = new string[4];
-			ActivitiesModel activities = await Activities.LoadValue().ConfigureAwait(false);
+			ActivitiesModel activities = await Activities.
+				LoadValue().ConfigureAwait(false);
 
 			activitiesData[0] = activities.Activity;
 			activitiesData[1] = activities.Type;
@@ -144,7 +153,8 @@ namespace Async_Kursach
 		private static async Task<string[]> LoadJokes()
 		{
 			string[] jokesData = new string[2];
-			JokesModel jokes = await Jokes.LoadValue().ConfigureAwait(false);
+			JokesModel jokes = await Jokes.LoadValue()
+				.ConfigureAwait(false);
 
 			jokesData[0] = jokes.Setup;
 			jokesData[1] = jokes.Punchline;
