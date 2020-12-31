@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using Async_Kursach.Fundamentals;
 
 namespace Async_Kursach.UnitTests
 {
@@ -14,7 +14,7 @@ namespace Async_Kursach.UnitTests
 			int expected = 29;
 
 			// Act
-			//int actual = LoadNameAge
+			
 
 			// Assert
 		}

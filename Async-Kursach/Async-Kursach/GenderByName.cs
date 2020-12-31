@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Async_Kursach
+namespace Async_Kursach.Fundamentals
 {
 	/// <summary>
 	/// Access Genderize API

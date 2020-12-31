@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Async_Kursach
+namespace Async_Kursach.Fundamentals
 {
-	static class ApiMethods
+	public static class ApiMethods
 	{
 		/// <summary>
 		/// Calls all API.

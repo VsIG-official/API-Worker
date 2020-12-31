@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Async_Kursach
+namespace Async_Kursach.Fundamentals
 {
 	/// <summary>
 	///	Class for storing information from

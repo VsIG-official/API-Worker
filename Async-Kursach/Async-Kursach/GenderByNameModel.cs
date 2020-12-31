@@ -1,4 +1,4 @@
-﻿namespace Async_Kursach
+﻿namespace Async_Kursach.Fundamentals
 {
 	/// <summary>
 	/// Model for getting values from json
