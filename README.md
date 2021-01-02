@@ -57,6 +57,7 @@ Target Framework: .NET Framework 4.8
 
 ## License
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ea2f529552984318bd4aa8d45186de36)](https://app.codacy.com/gh/VsIG-official/API-Worker?utm_source=github.com&utm_medium=referral&utm_content=VsIG-official/API-Worker&utm_campaign=Badge_Grade)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
