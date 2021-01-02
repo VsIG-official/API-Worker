@@ -24,5 +24,5 @@ jobs:
       #run: dotnet build --no-restore
       #working-directory: ./Async-Kursach
     - name: Test
-      run: dotnet test
-      working-directory: ./Async-Kursach
+      run: dotnet test --no-build --verbosity normal
+      working-directory: ./Async-Kursach/Async-Kursach.UnitTests
