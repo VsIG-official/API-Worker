@@ -29,22 +29,15 @@ Simple C# console application, which uses these API's:
 
 ## Example
 
-```javascript
-// code away!
+```csharp
 
-let generateProject = project => {
-  let code = [];
-  for (let js = 0; js < project.length; js++) {
-    code.push(js);
-  }
-};
 ```
 
 ---
 
 ## Requirements
 
-
+Target Framework: .NET Framework 4.8
 
 ---
 
@@ -67,4 +60,4 @@ let generateProject = project => {
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2020 © <a href="https://github.com/VsIG-official" target="_blank">VsIG</a>.
+- Copyright 2021 © <a href="https://github.com/VsIG-official" target="_blank">VsIG</a>.
