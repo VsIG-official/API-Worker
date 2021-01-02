@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -20,9 +20,13 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
       working-directory: ./Async-Kursach
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
     #- name: Build
       #run: dotnet build --no-restore
       #working-directory: ./Async-Kursach
     - name: Test
       run: dotnet test --no-build --verbosity normal
-      working-directory: ./Async-Kursach
+      working-directory: ./Async-Kursach/Async-Kursach.UnitTests
