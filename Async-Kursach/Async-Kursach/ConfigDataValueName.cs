@@ -1,4 +1,4 @@
-﻿namespace Async_Kursach
+﻿namespace Async_Kursach.Fundamentals
 {
 	/// <summary>
 	/// Enumeration of the valid configuration data value names

@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace Async_Kursach
+namespace Async_Kursach.Fundamentals
 {
 	/// <summary>
 	/// Class for Api Client

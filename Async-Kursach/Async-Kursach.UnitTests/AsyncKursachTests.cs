@@ -99,7 +99,7 @@ namespace Async_Kursach.UnitTests
 		{
 			// Arrange
 			string name = "Maks";
-			string expected = "0,99";
+			string expected = "0,88";
 
 			ApiHelper.Initialize();
 
@@ -108,7 +108,7 @@ namespace Async_Kursach.UnitTests
 				ConfigureAwait(false);
 
 			// Assert
-			Assert.AreNotEqual(expected, actual[1]);
+			Assert.AreNotEqual(expected, actual[0]);
 		}
 
 		[TestMethod]
