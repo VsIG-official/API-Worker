@@ -99,7 +99,7 @@ namespace Async_Kursach.UnitTests
 		{
 			// Arrange
 			string name = "Maks";
-			string expected = "0,99";
+			string expected = "0,88";
 
 			ApiHelper.Initialize();
 
