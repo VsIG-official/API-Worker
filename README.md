@@ -1,4 +1,4 @@
-# Project Title
+# API Worker
 
 <p align="center">
   <img src="https://github.com/VsIG-official/API-Worker/blob/master/API-Worker.png" data-canonical-src="https://github.com/VsIG-official/API-Worker/blob/master/API-Worker.png" width="750" height="200" />
@@ -13,11 +13,11 @@
 
 ### Description
 
-> Subtitle or Short Description Goes Here
-
-> ideally one sentence
-
-> include terms/tags that can be searched
+Simple C# console application, which uses these API's:
+  - [Age by Name](https://agify.io/)
+  - [Gender by Name](https://genderize.io/)
+  - [Jokes](https://github.com/15Dkatz/official_joke_api)
+  - [Activities](https://www.boredapi.com/api/activity)
 
 ## Badges
 
