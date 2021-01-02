@@ -23,6 +23,7 @@ Simple C# console application, which uses these API's:
 
 ## Badges
 
+> [![Language](https://img.shields.io/badge/Language-C%23-blueviolet)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))
 
 
 ---
