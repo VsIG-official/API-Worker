@@ -24,7 +24,9 @@ Simple C# console application, which uses these API's:
 ## Badges
 
 > [![Language](https://img.shields.io/badge/Language-C%23-blueviolet)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))
-
+> [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ea2f529552984318bd4aa8d45186de36)](https://app.codacy.com/gh/VsIG-official/API-Worker?utm_source=github.com&utm_medium=referral&utm_content=VsIG-official/API-Worker&utm_campaign=Badge_Grade)
+> [![Theme](https://img.shields.io/badge/Theme-API-blue?style=flat-square)](https://en.wikipedia.org/wiki/API)
+> [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 ---
 
