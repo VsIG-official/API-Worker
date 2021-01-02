@@ -1,7 +1,7 @@
 # Project Title
 
 <p align="center">
-  <img src="https://github.com/VsIG-official/Images/blob/master/LogoFinalWhite.png" data-canonical-src="https://github.com/VsIG-official/Images/blob/master/LogoFinalWhite.png" width="200" height="100" />
+  <img src="https://github.com/VsIG-official/API-Worker/blob/master/API-Worker.png" data-canonical-src="https://github.com/VsIG-official/API-Worker/blob/master/API-Worker.png" width="750" height="200" />
 </p>
 
 ## Table of Contents (Optional)
