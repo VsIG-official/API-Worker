@@ -32,14 +32,6 @@
 		}
 
 		/// <summary>
-		/// Gets the string for entering wrong number
-		/// </summary>
-		public static string WrongNumber
-		{
-			get { return configData.WrongNumber; }
-		}
-
-		/// <summary>
 		/// Gets the string for wrong data
 		/// </summary>
 		public static string WrongData
@@ -53,6 +45,38 @@
 		public static string NextChoice
 		{
 			get { return configData.NextChoice; }
+		}
+
+		/// <summary>
+		/// Gets the string for first choice
+		/// </summary>
+		public static string One
+		{
+			get { return configData.One; }
+		}
+
+		/// <summary>
+		/// Gets the string for second choice
+		/// </summary>
+		public static string Two
+		{
+			get { return configData.Two; }
+		}
+
+		/// <summary>
+		/// Gets the string for third choice
+		/// </summary>
+		public static string Three
+		{
+			get { return configData.Three; }
+		}
+
+		/// <summary>
+		/// Gets the string for fourth choice
+		/// </summary>
+		public static string Four
+		{
+			get { return configData.Four; }
 		}
 
 		#endregion Properties

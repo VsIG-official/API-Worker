@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Async_Kursach.Fundamentals
 {
@@ -26,7 +27,7 @@ namespace Async_Kursach.Fundamentals
 		/// </summary>
 		static void LoadGreeting()
 		{
-			Console.WriteLine(ConfigUtils.Greeting);
+			Console.WriteLine(Regex.Unescape(ConfigUtils.Greeting));
 
 			LoadChoices();
 		}
@@ -36,7 +37,7 @@ namespace Async_Kursach.Fundamentals
 		/// </summary>
 		static void LoadChoices()
 		{
-			Console.WriteLine(ConfigUtils.NextChoice);
+			Console.WriteLine(Regex.Unescape(ConfigUtils.NextChoice));
 
 			string userChoice = Console.ReadLine();
 
@@ -67,13 +68,13 @@ namespace Async_Kursach.Fundamentals
 		/// </summary>
 		private static void CreateOperations()
 		{
-			operations["1"] = async () => { await
+			operations[ConfigUtils.One] = async () => { await
 				ApiMethods.LoadNameInfo().ConfigureAwait(false); };
-			operations["2"] = async () => { await
+			operations[ConfigUtils.Two] = async () => { await
 				ApiMethods.LoadActivities().ConfigureAwait(false); };
-			operations["3"] = async () => { await
+			operations[ConfigUtils.Three] = async () => { await
 				ApiMethods.LoadJokes().ConfigureAwait(false); };
-			operations["4"] = async () => { await
+			operations[ConfigUtils.Four] = async () => { await
 				ApiMethods.CallAllAPI().ConfigureAwait(false); };
 		}
 	}

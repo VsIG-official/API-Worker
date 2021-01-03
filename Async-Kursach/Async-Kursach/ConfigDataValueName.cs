@@ -7,8 +7,11 @@
 	{
 		Greeting,
 		EnterName,
-		WrongNumber,
 		WrongData,
-		NextChoice
+		NextChoice,
+		One,
+		Two,
+		Three,
+		Four
 	}
 }

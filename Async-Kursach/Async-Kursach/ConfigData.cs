@@ -24,14 +24,17 @@ namespace Async_Kursach.Fundamentals
 		// Delete these strings and SetDefaultValues method, if
 		// You want the user always be connected to the internet
 		private const string greeting = "Hi, My name is Async Kursach and I will " +
-			"help You to have some fun!/n";
-		private const string nextChoice = " Which one do You want to do?\n" +
+			"help You to have some fun!\n";
+		private  string nextChoice = " Which one do You want to do?\n" +
 			"1 - to predict some data, depending on Your name\n" +
 			"2 - find something to do by getting suggestions for random activities\n" +
-			"3 - get a joke \n 4 - do everything";
+			"3 - get a joke \n4 - do everything";
 		private const string enterName = "Enter Your name:";
-		private const string wrongNumber = "That's the wrong number";
 		private const string wrongData = "Something wrong with data. Try something else";
+		private const string one = "1";
+		private const string two = "2";
+		private const string three = "3";
+		private const string four = "4";
 
 		#endregion StringsForValues
 
@@ -58,14 +61,6 @@ namespace Async_Kursach.Fundamentals
 		/// <summary>
 		/// Gets the string for entering wrong number
 		/// </summary>
-		public string WrongNumber
-		{
-			get { return values[ConfigDataValueName.WrongNumber]; }
-		}
-
-		/// <summary>
-		/// Gets the string for entering wrong number
-		/// </summary>
 		public string WrongData
 		{
 			get { return values[ConfigDataValueName.WrongData]; }
@@ -77,6 +72,38 @@ namespace Async_Kursach.Fundamentals
 		public string NextChoice
 		{
 			get { return values[ConfigDataValueName.NextChoice]; }
+		}
+
+		/// <summary>
+		/// Gets the string for first choice
+		/// </summary>
+		public string One
+		{
+			get { return values[ConfigDataValueName.One]; }
+		}
+
+		/// <summary>
+		/// Gets the string for second choice
+		/// </summary>
+		public string Two
+		{
+			get { return values[ConfigDataValueName.Two]; }
+		}
+
+		/// <summary>
+		/// Gets the string for third choice
+		/// </summary>
+		public string Three
+		{
+			get { return values[ConfigDataValueName.Three]; }
+		}
+
+		/// <summary>
+		/// Gets the string for fourth choice
+		/// </summary>
+		public string Four
+		{
+			get { return values[ConfigDataValueName.Four]; }
 		}
 
 		#endregion Properties
@@ -103,7 +130,7 @@ namespace Async_Kursach.Fundamentals
 				string currentLine = input.ReadLine();
 				while (currentLine != null)
 				{
-					string[] tokens = currentLine.Split(',');
+					string[] tokens = currentLine.Split(';');
 					ConfigDataValueName valueName =
 						(ConfigDataValueName)Enum.Parse(
 							typeof(ConfigDataValueName), tokens[0]);
@@ -139,9 +166,12 @@ namespace Async_Kursach.Fundamentals
 			values.Clear();
 			values.Add(ConfigDataValueName.Greeting, greeting);
 			values.Add(ConfigDataValueName.EnterName, enterName);
-			values.Add(ConfigDataValueName.WrongNumber, wrongNumber);
 			values.Add(ConfigDataValueName.WrongData, wrongData);
 			values.Add(ConfigDataValueName.NextChoice, nextChoice);
+			values.Add(ConfigDataValueName.One, one);
+			values.Add(ConfigDataValueName.Two, two);
+			values.Add(ConfigDataValueName.Three, three);
+			values.Add(ConfigDataValueName.Four, four);
 		}
 
 		#endregion Methods
