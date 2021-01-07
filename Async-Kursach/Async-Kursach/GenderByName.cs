@@ -9,7 +9,7 @@ namespace Async_Kursach.Fundamentals
 	/// </summary>
 	public class GenderByName
 	{
-		private const string defaultString = "Valentyn";
+		private const string defaultString = "Maks";
 
 		/// <summary>
 		/// Loads specific value
@@ -34,7 +34,8 @@ namespace Async_Kursach.Fundamentals
 				{
 					// there We will read the data
 					// convert json to ValueByNameModel with correct properties
-					GenderByNameModel genderAndProbability = await response.Content.ReadAsAsync<GenderByNameModel>();
+					GenderByNameModel genderAndProbability = await response.
+						Content.ReadAsAsync<GenderByNameModel>();
 
 					return genderAndProbability;
 				}

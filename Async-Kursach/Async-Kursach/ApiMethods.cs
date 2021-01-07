@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Async_Kursach.Fundamentals
 {
+	/// <summary>
+	/// Class, which have all methods for API's
+	/// </summary>
 	public static class ApiMethods
 	{
 		/// <summary>
@@ -23,7 +23,6 @@ namespace Async_Kursach.Fundamentals
 		/// <summary>
 		/// Loads the name information from API
 		/// </summary>
-		/// <param name="name">Name of person</param>
 		public static async Task LoadNameInfo()
 		{
 			Console.WriteLine(ConfigUtils.EnterName);

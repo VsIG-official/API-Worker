@@ -9,6 +9,13 @@ namespace Async_Kursach.Fundamentals
 	public static class ApiHelper
 	{
 		// Create static, 'cause We need one client per application
+
+		/// <summary>
+		/// Gets or sets the API client
+		/// </summary>
+		/// <value>
+		/// The API client
+		/// </value>
 		public static HttpClient ApiClient { get; set; }
 
 		/// <summary>

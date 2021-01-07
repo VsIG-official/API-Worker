@@ -68,14 +68,26 @@ namespace Async_Kursach.Fundamentals
 		/// </summary>
 		private static void CreateOperations()
 		{
-			operations[ConfigUtils.One] = async () => { await
-				ApiMethods.LoadNameInfo().ConfigureAwait(false); };
-			operations[ConfigUtils.Two] = async () => { await
-				ApiMethods.LoadActivities().ConfigureAwait(false); };
-			operations[ConfigUtils.Three] = async () => { await
-				ApiMethods.LoadJokes().ConfigureAwait(false); };
-			operations[ConfigUtils.Four] = async () => { await
-				ApiMethods.CallAllAPI().ConfigureAwait(false); };
+			operations[ConfigUtils.One] = async () =>
+			{
+				await ApiMethods.LoadNameInfo().
+				ConfigureAwait(false);
+			};
+			operations[ConfigUtils.Two] = async () =>
+			{
+				await ApiMethods.LoadActivities().
+				ConfigureAwait(false);
+			};
+			operations[ConfigUtils.Three] = async () =>
+			{
+				await ApiMethods.LoadJokes().
+				ConfigureAwait(false);
+			};
+			operations[ConfigUtils.Four] = async () =>
+			{
+				await ApiMethods.CallAllAPI().
+				ConfigureAwait(false);
+			};
 		}
 	}
 }

@@ -5,6 +5,12 @@
 	/// </summary>
 	public class AgeByNameModel
 	{
+		/// <summary>
+		/// Gets or sets the age of person
+		/// </summary>
+		/// <value>
+		/// Age of person
+		/// </value>
 		public int Age { get; set; }
 	}
 }

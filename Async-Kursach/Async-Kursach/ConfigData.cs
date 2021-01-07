@@ -22,10 +22,10 @@ namespace Async_Kursach.Fundamentals
 		#region StringsForValues
 
 		// Delete these strings and SetDefaultValues method, if
-		// You want the user always be connected to the internet
+		// You want the user always be connected to the internet or to doc
 		private const string greeting = "Hi, My name is Async Kursach and I will " +
 			"help You to have some fun!\n";
-		private  string nextChoice = " Which one do You want to do?\n" +
+		private const string nextChoice = " Which one do You want to do?\n" +
 			"1 - to predict some data, depending on Your name\n" +
 			"2 - find something to do by getting suggestions for random activities\n" +
 			"3 - get a joke \n4 - do everything";
@@ -138,7 +138,7 @@ namespace Async_Kursach.Fundamentals
 					currentLine = input.ReadLine();
 				}
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
 				// set default values if something went wrong
 				SetDefaultValues();

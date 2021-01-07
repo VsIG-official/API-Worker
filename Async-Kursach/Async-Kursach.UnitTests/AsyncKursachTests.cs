@@ -1,16 +1,20 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Async_Kursach.Fundamentals;
+﻿using Async_Kursach.Fundamentals;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
-using System.Net.Http;
-using System.Net.Http.Headers;
 
 namespace Async_Kursach.UnitTests
 {
+	/// <summary>
+	/// Class, which have all tests
+	/// </summary>
 	[TestClass]
 	public class AsyncKursachTests
 	{
+		/// <summary>
+		/// Loads Maks age and is equal
+		/// </summary>
 		[TestMethod]
-		public async Task LoadNameAge_Maks_ReturnTrue()
+		public async Task LoadNameAge_Maks_Equal()
 		{
 			// Arrange
 			string name = "Maks";
@@ -26,8 +30,11 @@ namespace Async_Kursach.UnitTests
 			Assert.AreEqual(expected, actual);
 		}
 
+		/// <summary>
+		/// Loads Maks age and is not equal
+		/// </summary>
 		[TestMethod]
-		public async Task LoadNameAge_Maks_ReturnFalse()
+		public async Task LoadNameAge_Maks_NotEqual()
 		{
 			// Arrange
 			string name = "Maks";
@@ -43,8 +50,11 @@ namespace Async_Kursach.UnitTests
 			Assert.AreNotEqual(expected, actual);
 		}
 
+		/// <summary>
+		/// Loads Maks gender and is equal
+		/// </summary>
 		[TestMethod]
-		public async Task LoadNameGender_MaksGender_ReturnTrue()
+		public async Task LoadNameGender_MaksGender_Equal()
 		{
 			// Arrange
 			string name = "Maks";
@@ -60,8 +70,11 @@ namespace Async_Kursach.UnitTests
 			Assert.AreEqual(expected, actual[0]);
 		}
 
+		/// <summary>
+		/// Loads Maks gender and is not equal
+		/// </summary>
 		[TestMethod]
-		public async Task LoadNameGender_MaksGender_ReturnFalse()
+		public async Task LoadNameGender_MaksGender_NotEqual()
 		{
 			// Arrange
 			string name = "Maks";
@@ -77,8 +90,11 @@ namespace Async_Kursach.UnitTests
 			Assert.AreNotEqual(expected, actual[0]);
 		}
 
+		/// <summary>
+		/// Loads Maks gender probability and is equal
+		/// </summary>
 		[TestMethod]
-		public async Task LoadNameGender_MaksProbability_ReturnTrue()
+		public async Task LoadNameGender_MaksProbability_Equal()
 		{
 			// Arrange
 			string name = "Maks";
@@ -94,8 +110,11 @@ namespace Async_Kursach.UnitTests
 			Assert.AreEqual(expected, actual[1]);
 		}
 
+		/// <summary>
+		/// Loads Maks gender probability and is equal
+		/// </summary>
 		[TestMethod]
-		public async Task LoadNameGender_MaksProbability_ReturnFalse()
+		public async Task LoadNameGender_MaksProbability_NotEqual()
 		{
 			// Arrange
 			string name = "Maks";
@@ -111,8 +130,11 @@ namespace Async_Kursach.UnitTests
 			Assert.AreNotEqual(expected, actual[1]);
 		}
 
+		/// <summary>
+		/// Loads Maks age, gender, its probability and is equal
+		/// </summary>
 		[TestMethod]
-		public async Task LoadNameInfo_Maks_ReturnTrue()
+		public async Task LoadNameInfo_Maks_Equal()
 		{
 			// Arrange
 			string name = "Maks";
@@ -134,8 +156,11 @@ namespace Async_Kursach.UnitTests
 			Assert.AreEqual(expectedGender[1], actualGender[1]);
 		}
 
+		/// <summary>
+		/// Loads Maks age, gender, its probability and is not equal
+		/// </summary>
 		[TestMethod]
-		public async Task LoadNameInfo_Maks_ReturnFalse()
+		public async Task LoadNameInfo_Maks_NotEqual()
 		{
 			// Arrange
 			string name = "Maks";
