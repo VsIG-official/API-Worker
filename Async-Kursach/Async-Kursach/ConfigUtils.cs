@@ -79,6 +79,46 @@
 			get { return configData.Four; }
 		}
 
+		/// <summary>
+		/// Gets the string for fourth choice
+		/// </summary>
+		public static string DefaultName
+		{
+			get { return configData.DefaultName; }
+		}
+
+		/// <summary>
+		/// Gets the URL for Age API
+		/// </summary>
+		public static string AgeByNameURL
+		{
+			get { return configData.AgeByNameURL; }
+		}
+
+		/// <summary>
+		/// Gets the URL for Gender API
+		/// </summary>
+		public static string GenderByNameURL
+		{
+			get { return configData.GenderByNameURL; }
+		}
+
+		/// <summary>
+		/// Gets the URL for Activities API
+		/// </summary>
+		public static string ActivitiesURL
+		{
+			get { return configData.ActivitiesURL; }
+		}
+
+		/// <summary>
+		/// Gets the URL for Jokes API
+		/// </summary>
+		public static string JokesURL
+		{
+			get { return configData.JokesURL; }
+		}
+
 		#endregion Properties
 
 		#region PublicMethods

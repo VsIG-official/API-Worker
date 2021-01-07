@@ -181,6 +181,31 @@
             Gets the string for fourth choice
             </summary>
         </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.DefaultName">
+            <summary>
+            Gets the string for default Name
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.AgeByNameURL">
+            <summary>
+            Gets the URL for Age API
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.GenderByNameURL">
+            <summary>
+            Gets the URL for Gender API
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.ActivitiesURL">
+            <summary>
+            Gets the URL for Activities API
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.JokesURL">
+            <summary>
+            Gets the URL for Jokes API
+            </summary>
+        </member>
         <member name="M:Async_Kursach.Fundamentals.ConfigData.#ctor">
             <summary>
             Constructor
@@ -220,6 +245,11 @@
             The "next choice" string
             </summary>
         </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.DefaultName">
+            <summary>
+            The "default name" string
+            </summary>
+        </member>
         <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.One">
             <summary>
             The "1" string
@@ -238,6 +268,26 @@
         <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.Four">
             <summary>
             The "4" string
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.AgeByNameURL">
+            <summary>
+            URL of Age API
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.GenderByNameURL">
+            <summary>
+            URL of Gender API
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.ActivitiesURL">
+            <summary>
+            URL of Activities API
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.JokesURL">
+            <summary>
+            URL of Jokes API
             </summary>
         </member>
         <member name="T:Async_Kursach.Fundamentals.ConfigUtils">
@@ -285,6 +335,31 @@
         <member name="P:Async_Kursach.Fundamentals.ConfigUtils.Four">
             <summary>
             Gets the string for fourth choice
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.DefaultName">
+            <summary>
+            Gets the string for fourth choice
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.AgeByNameURL">
+            <summary>
+            Gets the URL for Age API
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.GenderByNameURL">
+            <summary>
+            Gets the URL for Gender API
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.ActivitiesURL">
+            <summary>
+            Gets the URL for Activities API
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.JokesURL">
+            <summary>
+            Gets the URL for Jokes API
             </summary>
         </member>
         <member name="M:Async_Kursach.Fundamentals.ConfigUtils.Initialize">

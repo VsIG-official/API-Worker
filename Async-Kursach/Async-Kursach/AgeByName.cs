@@ -9,32 +9,32 @@ namespace Async_Kursach.Fundamentals
 	/// </summary>
 	public class AgeByName
 	{
-		private const string defaultString = "Maks";
-
 		/// <summary>
 		/// Loads specific value
 		/// </summary>
 		public static async Task<AgeByNameModel> LoadValue(string text)
 		{
 			string url;
-			if (text != defaultString)
+			if (text != ConfigUtils.DefaultName)
 			{
-				url = $"https://api.agify.io?name={ text } ";
+				url = $"{ConfigUtils.AgeByNameURL}{ text } ";
 			}
 			else
 			{
-				url = $"https://api.agify.io?name={ defaultString }";
+				url = $"{ConfigUtils.AgeByNameURL}{ ConfigUtils.DefaultName }";
 			}
 
 			//open a call to a client
 			//or open a new request of ApiClient as await for response
-			using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
+			using (HttpResponseMessage response = await ApiHelper.ApiClient.
+				GetAsync(url))
 			{
 				if (response.IsSuccessStatusCode)
 				{
 					// there We will read the data
 					// convert json to ValueByNameModel with correct properties
-					AgeByNameModel age = await response.Content.ReadAsAsync<AgeByNameModel>();
+					AgeByNameModel age = await response.Content.ReadAsAsync
+						<AgeByNameModel>();
 
 					return age;
 				}

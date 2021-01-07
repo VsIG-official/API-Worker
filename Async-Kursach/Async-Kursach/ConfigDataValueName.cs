@@ -26,6 +26,11 @@
 		NextChoice,
 
 		/// <summary>
+		/// The "default name" string
+		/// </summary>
+		DefaultName,
+
+		/// <summary>
 		/// The "1" string
 		/// </summary>
 		One,
@@ -43,6 +48,26 @@
 		/// <summary>
 		/// The "4" string
 		/// </summary>
-		Four
+		Four,
+
+		/// <summary>
+		/// URL of Age API
+		/// </summary>
+		AgeByNameURL,
+
+		/// <summary>
+		/// URL of Gender API
+		/// </summary>
+		GenderByNameURL,
+
+		/// <summary>
+		/// URL of Activities API
+		/// </summary>
+		ActivitiesURL,
+
+		/// <summary>
+		/// URL of Jokes API
+		/// </summary>
+		JokesURL
 	}
 }

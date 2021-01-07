@@ -9,26 +9,25 @@ namespace Async_Kursach.Fundamentals
 	/// </summary>
 	public class GenderByName
 	{
-		private const string defaultString = "Maks";
-
 		/// <summary>
 		/// Loads specific value
 		/// </summary>
 		public static async Task<GenderByNameModel> LoadValue(string text)
 		{
 			string url;
-			if (text != defaultString)
+			if (text != ConfigUtils.DefaultName)
 			{
-				url = $"https://api.genderize.io/?name={ text } ";
+				url = $"{ConfigUtils.GenderByNameURL}{ text } ";
 			}
 			else
 			{
-				url = $"https://api.genderize.io/?name={ defaultString }";
+				url = $"{ConfigUtils.GenderByNameURL}{ ConfigUtils.DefaultName }";
 			}
 
 			//open a call to a client
 			//or open a new request of ApiClient as await for response
-			using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
+			using (HttpResponseMessage response = await ApiHelper.ApiClient.
+				GetAsync(url))
 			{
 				if (response.IsSuccessStatusCode)
 				{

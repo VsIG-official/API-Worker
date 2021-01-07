@@ -14,17 +14,17 @@ namespace Async_Kursach.Fundamentals
 		/// </summary>
 		public static async Task<ActivitiesModel> LoadValue()
 		{
-			string url = "https://www.boredapi.com/api/activity";
-
 			//open a call to a client
 			//or open a new request of ApiClient as await for response
-			using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
+			using (HttpResponseMessage response = await ApiHelper.ApiClient.
+				GetAsync(ConfigUtils.ActivitiesURL))
 			{
 				if (response.IsSuccessStatusCode)
 				{
 					// there We will read the data
 					// convert json to ValueByNameModel with correct properties
-					ActivitiesModel activityData = await response.Content.ReadAsAsync<ActivitiesModel>();
+					ActivitiesModel activityData = await response.Content.ReadAsAsync
+						<ActivitiesModel>();
 
 					return activityData;
 				}
