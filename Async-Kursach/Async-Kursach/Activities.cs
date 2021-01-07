@@ -14,8 +14,8 @@ namespace Async_Kursach.Fundamentals
 		/// </summary>
 		public static async Task<ActivitiesModel> LoadValue()
 		{
-			//open a call to a client
-			//or open a new request of ApiClient as await for response
+			// open a call to a client
+			// or open a new request of ApiClient as await for response
 			using (HttpResponseMessage response = await ApiHelper.ApiClient.
 				GetAsync(ConfigUtils.ActivitiesURL))
 			{
@@ -33,7 +33,7 @@ namespace Async_Kursach.Fundamentals
 					throw new Exception(response.ReasonPhrase);
 				}
 			}
-			//there a response is closing and make sure, that Our calls are cleaned up
+			// there a response is closing and make sure, that Our calls are cleaned up
 		}
 	}
 }
