@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessAPI.cs" />
     <Compile Include="Activities.cs" />
     <Compile Include="ActivitiesModel.cs" />
     <Compile Include="AgeByName.cs" />

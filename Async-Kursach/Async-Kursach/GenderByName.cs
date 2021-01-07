@@ -17,16 +17,17 @@ namespace Async_Kursach.Fundamentals
 			string url;
 			if (text != ConfigUtils.DefaultName)
 			{
-				url = $"https://api.genderize.io/?name={ text } ";
+				url = $"{ConfigUtils.GenderByNameURL}{ text } ";
 			}
 			else
 			{
-				url = $"https://api.genderize.io/?name={ ConfigUtils.DefaultName }";
+				url = $"{ConfigUtils.GenderByNameURL}{ ConfigUtils.DefaultName }";
 			}
 
 			//open a call to a client
 			//or open a new request of ApiClient as await for response
-			using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
+			using (HttpResponseMessage response = await ApiHelper.ApiClient.
+				GetAsync(url))
 			{
 				if (response.IsSuccessStatusCode)
 				{

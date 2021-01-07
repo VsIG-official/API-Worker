@@ -17,22 +17,24 @@ namespace Async_Kursach.Fundamentals
 			string url;
 			if (text != ConfigUtils.DefaultName)
 			{
-				url = $"https://api.agify.io?name={ text } ";
+				url = $"{ConfigUtils.AgeByNameURL}{ text } ";
 			}
 			else
 			{
-				url = $"https://api.agify.io?name={ ConfigUtils.DefaultName }";
+				url = $"{ConfigUtils.AgeByNameURL}{ ConfigUtils.DefaultName }";
 			}
 
 			//open a call to a client
 			//or open a new request of ApiClient as await for response
-			using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
+			using (HttpResponseMessage response = await ApiHelper.ApiClient.
+				GetAsync(url))
 			{
 				if (response.IsSuccessStatusCode)
 				{
 					// there We will read the data
 					// convert json to ValueByNameModel with correct properties
-					AgeByNameModel age = await response.Content.ReadAsAsync<AgeByNameModel>();
+					AgeByNameModel age = await response.Content.ReadAsAsync
+						<AgeByNameModel>();
 
 					return age;
 				}
