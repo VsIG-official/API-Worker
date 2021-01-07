@@ -35,6 +35,7 @@ namespace Async_Kursach.Fundamentals
 		private const string two = "2";
 		private const string three = "3";
 		private const string four = "4";
+		private const string defaultName = "Maks";
 
 		#endregion StringsForValues
 
@@ -106,6 +107,14 @@ namespace Async_Kursach.Fundamentals
 			get { return values[ConfigDataValueName.Four]; }
 		}
 
+		/// <summary>
+		/// Gets the string for default Name
+		/// </summary>
+		public string DefaultName
+		{
+			get { return values[ConfigDataValueName.DefaultName]; }
+		}
+
 		#endregion Properties
 
 		#region Constructor
@@ -172,6 +181,7 @@ namespace Async_Kursach.Fundamentals
 			values.Add(ConfigDataValueName.Two, two);
 			values.Add(ConfigDataValueName.Three, three);
 			values.Add(ConfigDataValueName.Four, four);
+			values.Add(ConfigDataValueName.DefaultName, defaultName);
 		}
 
 		#endregion Methods

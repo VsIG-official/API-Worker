@@ -12,9 +12,9 @@ namespace Async_Kursach.Fundamentals
 		/// <summary>
 		/// Loads specific value
 		/// </summary>
-		public static async Task<ActivitiesModel> LoadValue()
+		public static async Task<ActivitiesModel> LoadValue(string url)
 		{
-			string url = "https://www.boredapi.com/api/activity";
+			//string url = "https://www.boredapi.com/api/activity";
 
 			//open a call to a client
 			//or open a new request of ApiClient as await for response

@@ -26,6 +26,11 @@
 		NextChoice,
 
 		/// <summary>
+		/// The "default name" string
+		/// </summary>
+		DefaultName,
+
+		/// <summary>
 		/// The "1" string
 		/// </summary>
 		One,

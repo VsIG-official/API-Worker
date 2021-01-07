@@ -9,21 +9,19 @@ namespace Async_Kursach.Fundamentals
 	/// </summary>
 	public class AgeByName
 	{
-		private const string defaultString = "Maks";
-
 		/// <summary>
 		/// Loads specific value
 		/// </summary>
 		public static async Task<AgeByNameModel> LoadValue(string text)
 		{
 			string url;
-			if (text != defaultString)
+			if (text != ConfigUtils.DefaultName)
 			{
 				url = $"https://api.agify.io?name={ text } ";
 			}
 			else
 			{
-				url = $"https://api.agify.io?name={ defaultString }";
+				url = $"https://api.agify.io?name={ ConfigUtils.DefaultName }";
 			}
 
 			//open a call to a client

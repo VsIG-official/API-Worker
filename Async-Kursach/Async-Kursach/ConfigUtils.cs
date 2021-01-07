@@ -79,6 +79,14 @@
 			get { return configData.Four; }
 		}
 
+		/// <summary>
+		/// Gets the string for fourth choice
+		/// </summary>
+		public static string DefaultName
+		{
+			get { return configData.DefaultName; }
+		}
+
 		#endregion Properties
 
 		#region PublicMethods
