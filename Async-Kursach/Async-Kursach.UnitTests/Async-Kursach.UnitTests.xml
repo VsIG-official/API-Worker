@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Async-Kursach.UnitTests</name>
+    </assembly>
+    <members>
+        <member name="T:Async_Kursach.UnitTests.AsyncKursachTests">
+            <summary>
+            Class, which have all tests
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.UnitTests.AsyncKursachTests.LoadNameAge_Maks_Equal">
+            <summary>
+            Loads Maks age and is equal
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.UnitTests.AsyncKursachTests.LoadNameAge_Maks_NotEqual">
+            <summary>
+            Loads Maks age and is not equal
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.UnitTests.AsyncKursachTests.LoadNameGender_MaksGender_Equal">
+            <summary>
+            Loads Maks gender and is equal
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.UnitTests.AsyncKursachTests.LoadNameGender_MaksGender_NotEqual">
+            <summary>
+            Loads Maks gender and is not equal
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.UnitTests.AsyncKursachTests.LoadNameGender_MaksProbability_Equal">
+            <summary>
+            Loads Maks gender probability and is equal
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.UnitTests.AsyncKursachTests.LoadNameGender_MaksProbability_NotEqual">
+            <summary>
+            Loads Maks gender probability and is equal
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.UnitTests.AsyncKursachTests.LoadNameInfo_Maks_Equal">
+            <summary>
+            Loads Maks age, gender, its probability and is equal
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.UnitTests.AsyncKursachTests.LoadNameInfo_Maks_NotEqual">
+            <summary>
+            Loads Maks age, gender, its probability and is not equal
+            </summary>
+        </member>
+    </members>
+</doc>

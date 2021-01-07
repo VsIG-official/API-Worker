@@ -9,7 +9,7 @@ namespace Async_Kursach.Fundamentals
 	/// </summary>
 	public class AgeByName
 	{
-		private const string defaultString = "Valentyn";
+		private const string defaultString = "Maks";
 
 		/// <summary>
 		/// Loads specific value

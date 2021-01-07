@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Async-Kursach.Fundamentals</name>
+    </assembly>
+    <members>
+        <member name="T:Async_Kursach.Fundamentals.Activities">
+            <summary>
+            Access Activity API
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.Activities.LoadValue">
+            <summary>
+            Loads specific value
+            </summary>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.ActivitiesModel">
+            <summary>
+            Model for getting values from json
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ActivitiesModel.Activity">
+            <summary>
+            Gets or sets the activity
+            </summary>
+            <value>
+            Activity
+            </value>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ActivitiesModel.Type">
+            <summary>
+            Gets or sets the type of activity
+            </summary>
+            <value>
+            Type of activity
+            </value>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ActivitiesModel.Participants">
+            <summary>
+            Gets or sets the participants of activity
+            </summary>
+            <value>
+            The participants of activity
+            </value>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ActivitiesModel.Price">
+            <summary>
+            Gets or sets the price of activity
+            </summary>
+            <value>
+            The price of activity
+            </value>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.AgeByName">
+            <summary>
+            Access Agify API
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.AgeByName.LoadValue(System.String)">
+            <summary>
+            Loads specific value
+            </summary>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.AgeByNameModel">
+            <summary>
+            Model for getting values from json
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.AgeByNameModel.Age">
+            <summary>
+            Gets or sets the age of person
+            </summary>
+            <value>
+            Age of person
+            </value>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.ApiHelper">
+            <summary>
+            Class for Api Client
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ApiHelper.ApiClient">
+            <summary>
+            Gets or sets the API client
+            </summary>
+            <value>
+            The API client
+            </value>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.ApiHelper.Initialize">
+            <summary>
+            Initializes API client
+            </summary>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.ApiMethods">
+            <summary>
+            Class, which have all methods for API's
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.ApiMethods.CallAllAPI">
+            <summary>
+            Calls all API.
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.ApiMethods.LoadNameInfo">
+            <summary>
+            Loads the name information from API
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.ApiMethods.LoadNameAge(System.String)">
+            <summary>
+            Loads the name age from API
+            </summary>
+            <param name="name">Name of person</param>
+            <returns> age </returns>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.ApiMethods.LoadNameGender(System.String)">
+            <summary>
+            Loads the name gender from API
+            </summary>
+            <param name="name">Name of person</param>
+            <returns> array with data </returns>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.ApiMethods.LoadActivities">
+            <summary>
+            Loads the activities from API
+            </summary>
+            <returns> array with data </returns>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.ApiMethods.LoadJokes">
+            <summary>
+            Loads the jokes from API
+            </summary>
+            <returns> array with data </returns>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.ConfigData">
+            <summary>
+            Class for storing information from
+            a csv or json file for using in other classes
+            OR
+            Container for data
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.Greeting">
+            <summary>
+            Gets the string for greeting for start application
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.EnterName">
+            <summary>
+            Gets the string for entering name
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.WrongData">
+            <summary>
+            Gets the string for entering wrong number
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.NextChoice">
+            <summary>
+            Gets the string for entering next choice taxt
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.One">
+            <summary>
+            Gets the string for first choice
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.Two">
+            <summary>
+            Gets the string for second choice
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.Three">
+            <summary>
+            Gets the string for third choice
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.Four">
+            <summary>
+            Gets the string for fourth choice
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.ConfigData.#ctor">
+            <summary>
+            Constructor
+            Reads configuration data from a file. If the file
+            read fails, the object contains default values for
+            the configuration data
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.ConfigData.SetDefaultValues">
+            <summary>
+            Sets the configuration data fields to default values
+            csv string
+            </summary>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.ConfigDataValueName">
+            <summary>
+            Enumeration of the valid configuration data value names
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.Greeting">
+            <summary>
+            The "greeting" string
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.EnterName">
+            <summary>
+            The "enter name" string
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.WrongData">
+            <summary>
+            The "wrong data" string
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.NextChoice">
+            <summary>
+            The "next choice" string
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.One">
+            <summary>
+            The "1" string
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.Two">
+            <summary>
+            The "2" string
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.Three">
+            <summary>
+            The "3" string
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.Four">
+            <summary>
+            The "4" string
+            </summary>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.ConfigUtils">
+            <summary>
+            Static class for storing data
+            OR
+            Mechanism for accessing the data
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.Greeting">
+            <summary>
+            Gets the string for greeting for start application
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.EnterName">
+            <summary>
+            Gets the string for entering name
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.WrongData">
+            <summary>
+            Gets the string for wrong data
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.NextChoice">
+            <summary>
+            Gets the string for wrong data
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.One">
+            <summary>
+            Gets the string for first choice
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.Two">
+            <summary>
+            Gets the string for second choice
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.Three">
+            <summary>
+            Gets the string for third choice
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.Four">
+            <summary>
+            Gets the string for fourth choice
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.ConfigUtils.Initialize">
+            <summary>
+            Initializes the configuration data by creating the ConfigData object
+            </summary>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.GenderByName">
+            <summary>
+            Access Genderize API
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.GenderByName.LoadValue(System.String)">
+            <summary>
+            Loads specific value
+            </summary>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.GenderByNameModel">
+            <summary>
+            Model for getting values from json
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.GenderByNameModel.Gender">
+            <summary>
+            Gets or sets the gender of person
+            </summary>
+            <value>
+            The gender of person
+            </value>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.GenderByNameModel.Probability">
+            <summary>
+            Gets or sets the probability of gender
+            </summary>
+            <value>
+            The probability of gender
+            </value>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.Jokes">
+            <summary>
+            Access Jokes API
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.Jokes.LoadValue">
+            <summary>
+            Loads specific value
+            </summary>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.JokesModel">
+            <summary>
+            Model for getting values from json
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.JokesModel.Setup">
+            <summary>
+            Gets or sets the setup of joke
+            </summary>
+            <value>
+            The setup  of joke
+            </value>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.JokesModel.Punchline">
+            <summary>
+            Gets or sets the punchline of joke
+            </summary>
+            <value>
+            The punchline of joke
+            </value>
+        </member>
+        <member name="T:Async_Kursach.Fundamentals.Program">
+            <summary>
+            Start point of program
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.Program.Main">
+            <summary>
+            Defines the entry point of the application.
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.Program.LoadGreeting">
+            <summary>
+            Load greeting and begin choices method
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.Program.LoadChoices">
+            <summary>
+            Load and operate with choices
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.Program.Initialize">
+            <summary>
+            Initialization of things
+            </summary>
+        </member>
+        <member name="M:Async_Kursach.Fundamentals.Program.CreateOperations">
+            <summary>
+            Replacement of if-else
+            </summary>
+        </member>
+    </members>
+</doc>
