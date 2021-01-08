@@ -20,6 +20,7 @@ namespace Async_Kursach.UnitTests
 			string name = "Maks";
 			int expected = 30;
 
+			ConfigUtils.Initialize();
 			ApiHelper.Initialize();
 
 			// Act
@@ -40,6 +41,7 @@ namespace Async_Kursach.UnitTests
 			string name = "Maks";
 			int expected = 20;
 
+			ConfigUtils.Initialize();
 			ApiHelper.Initialize();
 
 			// Act
@@ -60,6 +62,7 @@ namespace Async_Kursach.UnitTests
 			string name = "Maks";
 			string expected = "male";
 
+			ConfigUtils.Initialize();
 			ApiHelper.Initialize();
 
 			// Act
@@ -80,6 +83,7 @@ namespace Async_Kursach.UnitTests
 			string name = "Maks";
 			string expected = "female";
 
+			ConfigUtils.Initialize();
 			ApiHelper.Initialize();
 
 			// Act
@@ -100,6 +104,7 @@ namespace Async_Kursach.UnitTests
 			string name = "Maks";
 			string expected = "0,99";
 
+			ConfigUtils.Initialize();
 			ApiHelper.Initialize();
 
 			// Act
@@ -120,6 +125,7 @@ namespace Async_Kursach.UnitTests
 			string name = "Maks";
 			string expected = "0,88";
 
+			ConfigUtils.Initialize();
 			ApiHelper.Initialize();
 
 			// Act
@@ -141,6 +147,7 @@ namespace Async_Kursach.UnitTests
 			int expectedAge = 30;
 			string[] expectedGender = { "male", "0,99" };
 
+			ConfigUtils.Initialize();
 			ApiHelper.Initialize();
 
 			// Act
@@ -167,6 +174,7 @@ namespace Async_Kursach.UnitTests
 			int expectedAge = 20;
 			string[] expectedGender = { "female", "0,88" };
 
+			ConfigUtils.Initialize();
 			ApiHelper.Initialize();
 
 			// Act
@@ -180,6 +188,27 @@ namespace Async_Kursach.UnitTests
 			Assert.AreNotEqual(expectedAge, actualAge);
 			Assert.AreNotEqual(expectedGender[0], actualGender[0]);
 			Assert.AreNotEqual(expectedGender[1], actualGender[1]);
+		}
+
+		/// <summary>
+		/// Loads Activity and is not null
+		/// </summary>
+		[TestMethod]
+		public async Task LoadActivity_NotNull()
+		{
+			// Arrange
+			ConfigUtils.Initialize();
+			ApiHelper.Initialize();
+
+			// Act
+			string[] actual = await ApiMethods.LoadActivities().
+				ConfigureAwait(false);
+
+			// Assert
+			for (int i = 0; i < actual.Length; i++)
+			{
+				Assert.IsNotNull(actual[i]);
+			}
 		}
 	}
 }

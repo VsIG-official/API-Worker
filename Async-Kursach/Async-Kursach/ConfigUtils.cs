@@ -5,7 +5,7 @@
 	/// OR
 	/// Mechanism for accessing the data
 	/// </summary>
-	internal static class ConfigUtils
+	public static class ConfigUtils
 	{
 		#region Fields
 

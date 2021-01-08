@@ -49,5 +49,10 @@
             Loads Maks age, gender, its probability and is not equal
             </summary>
         </member>
+        <member name="M:Async_Kursach.UnitTests.AsyncKursachTests.LoadActivity_NotNull">
+            <summary>
+            Loads Activity and is not null
+            </summary>
+        </member>
     </members>
 </doc>
