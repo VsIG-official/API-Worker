@@ -31,11 +31,14 @@ namespace Async_Kursach.Fundamentals
 			"3 - get a joke \n4 - do everything";
 		private const string enterName = "Enter Your name:";
 		private const string wrongData = "Something wrong with data. Try something else";
+
 		private const string one = "1";
 		private const string two = "2";
 		private const string three = "3";
 		private const string four = "4";
+
 		private const string defaultName = "Maks";
+
 		private const string ageByNameURL = "https://api.agify.io?name=";
 		private const string genderByNameURL = "https://api.genderize.io/?name=";
 		private const string activitiesURL = "https://www.boredapi.com/api/activity";
@@ -218,6 +221,10 @@ namespace Async_Kursach.Fundamentals
 			values.Add(ConfigDataValueName.Three, three);
 			values.Add(ConfigDataValueName.Four, four);
 			values.Add(ConfigDataValueName.DefaultName, defaultName);
+			values.Add(ConfigDataValueName.AgeByNameURL, ageByNameURL);
+			values.Add(ConfigDataValueName.GenderByNameURL, genderByNameURL);
+			values.Add(ConfigDataValueName.ActivitiesURL, activitiesURL);
+			values.Add(ConfigDataValueName.JokesURL, jokesURL);
 		}
 
 		#endregion Methods
