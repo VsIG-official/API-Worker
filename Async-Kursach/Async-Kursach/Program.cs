@@ -43,6 +43,8 @@ namespace Async_Kursach.Fundamentals
 
 			try
 			{
+				// accepts the delegate and executes it in the thread
+				// in which the control called Invoke was created
 				operations[userChoice].Invoke();
 			}
 			catch (Exception)
