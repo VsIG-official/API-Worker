@@ -211,6 +211,16 @@
             Gets the name information string.
             </summary>
         </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.ActivitiesString">
+            <summary>
+            Gets the activities string.
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.JokesString">
+            <summary>
+            Gets the jokes string.
+            </summary>
+        </member>
         <member name="M:Async_Kursach.Fundamentals.ConfigData.#ctor">
             <summary>
             Constructor
@@ -300,6 +310,16 @@
             The name information string
             </summary>
         </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.ActivitiesString">
+            <summary>
+            The activities string
+            </summary>
+        </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.JokesString">
+            <summary>
+            The jokes string
+            </summary>
+        </member>
         <member name="T:Async_Kursach.Fundamentals.ConfigUtils">
             <summary>
             Static class for storing data
@@ -375,6 +395,16 @@
         <member name="P:Async_Kursach.Fundamentals.ConfigUtils.NameInfoString">
             <summary>
             Gets the name information string.
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.ActivitiesString">
+            <summary>
+            Gets the activities string.
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.JokesString">
+            <summary>
+            Gets the jokes string.
             </summary>
         </member>
         <member name="M:Async_Kursach.Fundamentals.ConfigUtils.Initialize">

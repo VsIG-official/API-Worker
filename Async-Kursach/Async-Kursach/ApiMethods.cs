@@ -36,7 +36,8 @@ namespace Async_Kursach.Fundamentals
 
 			Console.WriteLine();
 
-			string output = string.Format(Regex.Unescape(ConfigUtils.NameInfoString), userName, age,
+			string output = string.Format(Regex.Unescape(
+				ConfigUtils.NameInfoString), userName, age,
 				genderData[0], genderData[1]);
 
 			Console.WriteLine(output);
@@ -87,11 +88,12 @@ namespace Async_Kursach.Fundamentals
 			activitiesData[2] = activities.Participants.ToString();
 			activitiesData[3] = activities.Price.ToString();
 
-			Console.WriteLine($"There is some interesting activity: \n" +
-				$"Activity - {activitiesData[0]} \n" +
-				$"Type - {activitiesData[1]} with \n" +
-				$"Participants - {activitiesData[2]} \n" +
-				$"Price - {activitiesData[3]}");
+			string output = string.Format(Regex.Unescape(
+				ConfigUtils.ActivitiesString), activitiesData[0],
+				activitiesData[1], activitiesData[2],
+				activitiesData[3]);
+
+			Console.WriteLine(output);
 
 			return activitiesData;
 		}
@@ -109,12 +111,11 @@ namespace Async_Kursach.Fundamentals
 			jokesData[0] = jokes.Setup;
 			jokesData[1] = jokes.Punchline;
 
-			Console.WriteLine($"Here comes the joke: \n" +
-				$"{jokesData[0]}\n" +
-				$"...\n" +
-				$"...\n" +
-				$"...\n" +
-				$"{jokesData[1]}");
+			string output = string.Format(Regex.Unescape(
+				ConfigUtils.JokesString), jokesData[0],
+				jokesData[1]);
+
+			Console.WriteLine(output);
 
 			return jokesData;
 		}

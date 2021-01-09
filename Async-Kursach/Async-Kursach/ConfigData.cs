@@ -48,6 +48,9 @@ namespace Async_Kursach.Fundamentals
 				"Your predicted age is {1} \n" +
 				"Your predicted gender is {2} with " +
 				"probability of {3}";
+		private const string activitiesString = "There is some interesting activity:" +
+			" \nActivity - {0} \nType - {1} with \nParticipants - {2} \nPrice - {3}";
+		private const string jokesString = "Here comes the joke: \n{0}\n...\n...\n...\n{1}";
 
 		#endregion StringsForValues
 
@@ -168,6 +171,23 @@ namespace Async_Kursach.Fundamentals
 			get { return values[ConfigDataValueName.NameInfoString]; }
 		}
 
+		/// <summary>
+		/// Gets the activities string.
+		/// </summary>
+		public string ActivitiesString
+		{
+			get { return values[ConfigDataValueName.ActivitiesString]; }
+		}
+
+
+		/// <summary>
+		/// Gets the jokes string.
+		/// </summary>
+		public string JokesString
+		{
+			get { return values[ConfigDataValueName.JokesString]; }
+		}
+
 		#endregion Properties
 
 		#region Constructor
@@ -239,6 +259,9 @@ namespace Async_Kursach.Fundamentals
 			values.Add(ConfigDataValueName.GenderByNameURL, genderByNameURL);
 			values.Add(ConfigDataValueName.ActivitiesURL, activitiesURL);
 			values.Add(ConfigDataValueName.JokesURL, jokesURL);
+			values.Add(ConfigDataValueName.NameInfoString, nameInfoString);
+			values.Add(ConfigDataValueName.ActivitiesString, activitiesString);
+			values.Add(ConfigDataValueName.JokesString, jokesString);
 		}
 
 		#endregion Methods

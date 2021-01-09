@@ -73,6 +73,16 @@
 		/// <summary>
 		/// The name information string
 		/// </summary>
-		NameInfoString
+		NameInfoString,
+
+		/// <summary>
+		/// The activities string
+		/// </summary>
+		ActivitiesString,
+
+		/// <summary>
+		/// The jokes string
+		/// </summary>
+		JokesString
 	}
 }

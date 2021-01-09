@@ -127,6 +127,23 @@
 			get { return configData.NameInfoString; }
 		}
 
+		/// <summary>
+		/// Gets the activities string.
+		/// </summary>
+		public static string ActivitiesString
+		{
+			get { return configData.ActivitiesString; }
+		}
+
+
+		/// <summary>
+		/// Gets the jokes string.
+		/// </summary>
+		public static string JokesString
+		{
+			get { return configData.JokesString; }
+		}
+
 		#endregion Properties
 
 		#region PublicMethods
