@@ -159,8 +159,11 @@ namespace Async_Kursach.UnitTests
 
 			// Assert
 			Assert.AreEqual(expectedAge, actualAge);
-			Assert.AreEqual(expectedGender[0], actualGender[0]);
-			Assert.AreEqual(expectedGender[1], actualGender[1]);
+
+			for (int i = 0; i < actualGender.Length; i++)
+			{
+				Assert.AreEqual(expectedGender[i], actualGender[i]);
+			}
 		}
 
 		/// <summary>
@@ -186,8 +189,11 @@ namespace Async_Kursach.UnitTests
 
 			// Assert
 			Assert.AreNotEqual(expectedAge, actualAge);
-			Assert.AreNotEqual(expectedGender[0], actualGender[0]);
-			Assert.AreNotEqual(expectedGender[1], actualGender[1]);
+
+			for (int i = 0; i < actualGender.Length; i++)
+			{
+				Assert.AreNotEqual(expectedGender[i], actualGender[i]);
+			}
 		}
 
 		/// <summary>
