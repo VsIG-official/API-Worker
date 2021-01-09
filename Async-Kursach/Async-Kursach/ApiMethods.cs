@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Async_Kursach.Fundamentals
@@ -33,10 +34,12 @@ namespace Async_Kursach.Fundamentals
 			string[] genderData = await LoadNameGender
 				(userName).ConfigureAwait(false);
 
-			Console.WriteLine($"Here some data for {userName} name: \n" +
-				$"Your predicted age is {age} \n" +
-				$"Your predicted gender is {genderData[0]} with " +
-				$"probability of {genderData[1]}");
+			Console.WriteLine();
+
+			string output = string.Format(Regex.Unescape(ConfigUtils.NameInfoString), userName, age,
+				genderData[0], genderData[1]);
+
+			Console.WriteLine(output);
 		}
 
 		/// <summary>

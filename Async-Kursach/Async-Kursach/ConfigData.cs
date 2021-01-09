@@ -44,6 +44,11 @@ namespace Async_Kursach.Fundamentals
 		private const string activitiesURL = "https://www.boredapi.com/api/activity";
 		private const string jokesURL = "https://official-joke-api.appspot.com/random_joke";
 
+		private const string nameInfoString = "Here some data for {0} name: \n" +
+				"Your predicted age is {1} \n" +
+				"Your predicted gender is {2} with " +
+				"probability of {3}";
+
 		#endregion StringsForValues
 
 		#endregion Fields
@@ -152,6 +157,15 @@ namespace Async_Kursach.Fundamentals
 		public string JokesURL
 		{
 			get { return values[ConfigDataValueName.JokesURL]; }
+		}
+
+
+		/// <summary>
+		/// Gets the name information string.
+		/// </summary>
+		public string NameInfoString
+		{
+			get { return values[ConfigDataValueName.NameInfoString]; }
 		}
 
 		#endregion Properties

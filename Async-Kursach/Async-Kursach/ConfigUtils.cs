@@ -119,6 +119,14 @@
 			get { return configData.JokesURL; }
 		}
 
+		/// <summary>
+		/// Gets the name information string.
+		/// </summary>
+		public static string NameInfoString
+		{
+			get { return configData.NameInfoString; }
+		}
+
 		#endregion Properties
 
 		#region PublicMethods

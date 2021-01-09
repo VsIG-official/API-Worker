@@ -68,6 +68,11 @@
 		/// <summary>
 		/// URL of Jokes API
 		/// </summary>
-		JokesURL
+		JokesURL,
+
+		/// <summary>
+		/// The name information string
+		/// </summary>
+		NameInfoString
 	}
 }

@@ -206,6 +206,11 @@
             Gets the URL for Jokes API
             </summary>
         </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigData.NameInfoString">
+            <summary>
+            Gets the name information string.
+            </summary>
+        </member>
         <member name="M:Async_Kursach.Fundamentals.ConfigData.#ctor">
             <summary>
             Constructor
@@ -290,6 +295,11 @@
             URL of Jokes API
             </summary>
         </member>
+        <member name="F:Async_Kursach.Fundamentals.ConfigDataValueName.NameInfoString">
+            <summary>
+            The name information string
+            </summary>
+        </member>
         <member name="T:Async_Kursach.Fundamentals.ConfigUtils">
             <summary>
             Static class for storing data
@@ -360,6 +370,11 @@
         <member name="P:Async_Kursach.Fundamentals.ConfigUtils.JokesURL">
             <summary>
             Gets the URL for Jokes API
+            </summary>
+        </member>
+        <member name="P:Async_Kursach.Fundamentals.ConfigUtils.NameInfoString">
+            <summary>
+            Gets the name information string.
             </summary>
         </member>
         <member name="M:Async_Kursach.Fundamentals.ConfigUtils.Initialize">
