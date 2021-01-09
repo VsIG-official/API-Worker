@@ -64,7 +64,7 @@ namespace Async_Kursach.Fundamentals
 		}
 
 		/// <summary>
-		/// Replacement of if-else
+		/// Replacement of if-else with lambdas
 		/// </summary>
 		private static void CreateOperations()
 		{
