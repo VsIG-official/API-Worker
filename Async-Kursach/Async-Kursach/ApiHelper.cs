@@ -11,7 +11,10 @@ namespace Async_Kursach.Fundamentals
 		// Create static, 'cause We need one client per application
 
 		/// <summary>
-		/// Gets or sets the API client
+		/// Gets or sets the API client;
+		/// Provides a base class for sending HTTP requests
+		/// and receiving HTTP responses from the resource
+		/// with the specified URI.
 		/// </summary>
 		/// <value>
 		/// The API client
@@ -32,6 +35,7 @@ namespace Async_Kursach.Fundamentals
 				BaseAddress = new Uri("http://somesite.com/")
 				*/
 			};
+			// The headers that should be sent with each request
 			ApiClient.DefaultRequestHeaders.Accept.Clear();
 			// give Us json, not webpage or etc.
 			ApiClient.DefaultRequestHeaders.Accept.Add(new
