@@ -33,7 +33,7 @@ namespace Async_Kursach.Fundamentals
 		}
 
 		/// <summary>
-		/// Load and operate with choices
+		/// Loads the choices.
 		/// </summary>
 		static void LoadChoices()
 		{

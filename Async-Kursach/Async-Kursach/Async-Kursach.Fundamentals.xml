@@ -81,7 +81,10 @@
         </member>
         <member name="P:Async_Kursach.Fundamentals.ApiHelper.ApiClient">
             <summary>
-            Gets or sets the API client
+            Gets or sets the API client;
+            Provides a base class for sending HTTP requests
+            and receiving HTTP responses from the resource
+            with the specified URI.
             </summary>
             <value>
             The API client
@@ -501,7 +504,7 @@
         </member>
         <member name="M:Async_Kursach.Fundamentals.Program.CreateOperations">
             <summary>
-            Replacement of if-else
+            Replacement of if-else with lambdas
             </summary>
         </member>
     </members>
